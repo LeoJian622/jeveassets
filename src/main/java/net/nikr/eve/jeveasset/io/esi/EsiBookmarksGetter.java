@@ -30,11 +30,11 @@ import static net.nikr.eve.jeveasset.io.esi.AbstractEsiGetter.DATASOURCE;
 import static net.nikr.eve.jeveasset.io.esi.AbstractEsiGetter.DEFAULT_RETRIES;
 import net.nikr.eve.jeveasset.io.online.CitadelGetter;
 import net.nikr.eve.jeveasset.io.shared.ApiIdConverter;
-import net.troja.eve.esi.ApiException;
-import net.troja.eve.esi.ApiResponse;
-import net.troja.eve.esi.model.CharacterBookmarksResponse;
-import net.troja.eve.esi.model.CharacterRolesResponse;
-import net.troja.eve.esi.model.CorporationBookmarksResponse;
+import net.nikr.eve.jeveasset.esi.ApiException;
+import net.nikr.eve.jeveasset.esi.ApiResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterBookmarksResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterRolesResponse;
+import net.nikr.eve.jeveasset.esi.model.CorporationBookmarksResponse;
 
 
 public class EsiBookmarksGetter extends AbstractEsiGetter {

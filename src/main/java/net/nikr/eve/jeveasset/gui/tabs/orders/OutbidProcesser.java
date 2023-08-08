@@ -41,8 +41,8 @@ import net.nikr.eve.jeveasset.data.settings.Citadel;
 import net.nikr.eve.jeveasset.io.online.CitadelGetter;
 import net.nikr.eve.jeveasset.io.shared.ApiIdConverter;
 import net.nikr.eve.jeveasset.io.shared.RawConverter;
-import net.troja.eve.esi.api.MarketApi;
-import net.troja.eve.esi.api.UniverseApi;
+import net.nikr.eve.jeveasset.esi.api.MarketApi;
+import net.nikr.eve.jeveasset.esi.api.UniverseApi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

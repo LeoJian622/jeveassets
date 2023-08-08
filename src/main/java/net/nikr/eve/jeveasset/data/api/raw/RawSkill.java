@@ -20,7 +20,7 @@
  */
 package net.nikr.eve.jeveasset.data.api.raw;
 
-import net.troja.eve.esi.model.Skill;
+import net.nikr.eve.jeveasset.esi.model.Skill;
 
 
 public class RawSkill {

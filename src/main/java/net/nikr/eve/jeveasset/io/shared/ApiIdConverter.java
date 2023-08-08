@@ -52,12 +52,12 @@ import net.nikr.eve.jeveasset.i18n.General;
 import net.nikr.eve.jeveasset.io.esi.EsiItemsGetter;
 import net.nikr.eve.jeveasset.io.local.ItemsWriter;
 import net.nikr.eve.jeveasset.io.online.CitadelGetter;
-import net.troja.eve.esi.model.CharacterBookmarkItem;
-import net.troja.eve.esi.model.CharacterBookmarksResponse;
-import net.troja.eve.esi.model.CorporationBookmarkItem;
-import net.troja.eve.esi.model.CorporationBookmarksResponse;
-import net.troja.eve.esi.model.PlanetResponse;
-import net.troja.eve.esi.model.StructureResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterBookmarkItem;
+import net.nikr.eve.jeveasset.esi.model.CharacterBookmarksResponse;
+import net.nikr.eve.jeveasset.esi.model.CorporationBookmarkItem;
+import net.nikr.eve.jeveasset.esi.model.CorporationBookmarksResponse;
+import net.nikr.eve.jeveasset.esi.model.PlanetResponse;
+import net.nikr.eve.jeveasset.esi.model.StructureResponse;
 
 public final class ApiIdConverter {
 

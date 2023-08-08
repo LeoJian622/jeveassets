@@ -22,8 +22,8 @@ package net.nikr.eve.jeveasset.data.api.raw;
 
 import java.util.Date;
 import net.nikr.eve.jeveasset.io.shared.RawConverter;
-import net.troja.eve.esi.model.CharacterContractsResponse;
-import net.troja.eve.esi.model.CorporationContractsResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterContractsResponse;
+import net.nikr.eve.jeveasset.esi.model.CorporationContractsResponse;
 
 public class RawContract {
 

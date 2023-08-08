@@ -46,10 +46,10 @@ import net.nikr.eve.jeveasset.gui.tabs.values.AssetValue;
 import net.nikr.eve.jeveasset.gui.tabs.values.Value;
 import net.nikr.eve.jeveasset.io.online.CitadelGetter;
 import net.nikr.eve.jeveasset.io.shared.ApiIdConverter;
-import net.troja.eve.esi.ApiException;
-import net.troja.eve.esi.ApiResponse;
-import net.troja.eve.esi.model.CharacterRolesResponse.RolesEnum;
-import net.troja.eve.esi.model.StructureResponse;
+import net.nikr.eve.jeveasset.esi.ApiException;
+import net.nikr.eve.jeveasset.esi.ApiResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterRolesResponse.RolesEnum;
+import net.nikr.eve.jeveasset.esi.model.StructureResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

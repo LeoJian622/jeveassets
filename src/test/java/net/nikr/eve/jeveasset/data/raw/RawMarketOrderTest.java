@@ -24,10 +24,10 @@ import net.nikr.eve.jeveasset.TestUtil;
 import net.nikr.eve.jeveasset.data.api.raw.RawMarketOrder;
 import net.nikr.eve.jeveasset.data.api.raw.RawMarketOrder.MarketOrderRange;
 import net.nikr.eve.jeveasset.data.api.raw.RawMarketOrder.MarketOrderState;
-import net.troja.eve.esi.model.CharacterOrdersHistoryResponse;
-import net.troja.eve.esi.model.CharacterOrdersResponse;
-import net.troja.eve.esi.model.CorporationOrdersHistoryResponse;
-import net.troja.eve.esi.model.CorporationOrdersResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterOrdersHistoryResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterOrdersResponse;
+import net.nikr.eve.jeveasset.esi.model.CorporationOrdersHistoryResponse;
+import net.nikr.eve.jeveasset.esi.model.CorporationOrdersResponse;
 import org.junit.Test;
 
 

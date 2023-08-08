@@ -22,9 +22,9 @@ package net.nikr.eve.jeveasset.data.api.raw;
 
 import net.nikr.eve.jeveasset.data.api.my.MyBlueprint;
 import net.nikr.eve.jeveasset.io.shared.RawConverter;
-import net.troja.eve.esi.model.CharacterContractsItemsResponse;
-import net.troja.eve.esi.model.CorporationContractsItemsResponse;
-import net.troja.eve.esi.model.PublicContractsItemsResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterContractsItemsResponse;
+import net.nikr.eve.jeveasset.esi.model.CorporationContractsItemsResponse;
+import net.nikr.eve.jeveasset.esi.model.PublicContractsItemsResponse;
 
 public class RawContractItem {
 

@@ -23,8 +23,8 @@ package net.nikr.eve.jeveasset.data.raw;
 import net.nikr.eve.jeveasset.TestUtil;
 import net.nikr.eve.jeveasset.data.api.raw.RawMarketOrder.MarketOrderRange;
 import net.nikr.eve.jeveasset.data.api.raw.RawPublicMarketOrder;
-import net.troja.eve.esi.model.MarketOrdersResponse;
-import net.troja.eve.esi.model.MarketStructuresResponse;
+import net.nikr.eve.jeveasset.esi.model.MarketOrdersResponse;
+import net.nikr.eve.jeveasset.esi.model.MarketStructuresResponse;
 import org.junit.Test;
 
 

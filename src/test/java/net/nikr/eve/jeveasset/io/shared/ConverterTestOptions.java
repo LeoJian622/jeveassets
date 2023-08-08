@@ -44,20 +44,20 @@ import net.nikr.eve.jeveasset.data.settings.tag.Tags;
 import net.nikr.eve.jeveasset.gui.shared.table.containers.Percent;
 import net.nikr.eve.jeveasset.gui.tabs.orders.Outbid;
 import net.nikr.eve.jeveasset.io.esi.EsiCallbackURL;
-import net.troja.eve.esi.model.CharacterAssetsResponse;
-import net.troja.eve.esi.model.CharacterBlueprintsResponse;
-import net.troja.eve.esi.model.CharacterContractsResponse;
-import net.troja.eve.esi.model.CharacterIndustryJobsResponse;
-import net.troja.eve.esi.model.CharacterOrdersHistoryResponse;
-import net.troja.eve.esi.model.CharacterOrdersResponse;
-import net.troja.eve.esi.model.CharacterWalletJournalResponse;
-import net.troja.eve.esi.model.CorporationAssetsResponse;
-import net.troja.eve.esi.model.CorporationBlueprintsResponse;
-import net.troja.eve.esi.model.CorporationContractsResponse;
-import net.troja.eve.esi.model.CorporationIndustryJobsResponse;
-import net.troja.eve.esi.model.CorporationOrdersHistoryResponse;
-import net.troja.eve.esi.model.CorporationOrdersResponse;
-import net.troja.eve.esi.model.CorporationWalletJournalResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterAssetsResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterBlueprintsResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterContractsResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterIndustryJobsResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterOrdersHistoryResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterOrdersResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterWalletJournalResponse;
+import net.nikr.eve.jeveasset.esi.model.CorporationAssetsResponse;
+import net.nikr.eve.jeveasset.esi.model.CorporationBlueprintsResponse;
+import net.nikr.eve.jeveasset.esi.model.CorporationContractsResponse;
+import net.nikr.eve.jeveasset.esi.model.CorporationIndustryJobsResponse;
+import net.nikr.eve.jeveasset.esi.model.CorporationOrdersHistoryResponse;
+import net.nikr.eve.jeveasset.esi.model.CorporationOrdersResponse;
+import net.nikr.eve.jeveasset.esi.model.CorporationWalletJournalResponse;
 
 public interface ConverterTestOptions {
 

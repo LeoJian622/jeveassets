@@ -22,8 +22,8 @@ package net.nikr.eve.jeveasset.data.api.raw;
 
 import net.nikr.eve.jeveasset.data.sde.ItemFlag;
 import net.nikr.eve.jeveasset.io.shared.RawConverter;
-import net.troja.eve.esi.model.CharacterBlueprintsResponse;
-import net.troja.eve.esi.model.CorporationBlueprintsResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterBlueprintsResponse;
+import net.nikr.eve.jeveasset.esi.model.CorporationBlueprintsResponse;
 
 public class RawBlueprint {
 

@@ -44,7 +44,7 @@ import net.nikr.eve.jeveasset.gui.shared.components.JLockWindow;
 import net.nikr.eve.jeveasset.gui.shared.components.JLockWindow.LockWorkerAdaptor;
 import net.nikr.eve.jeveasset.i18n.GuiShared;
 import net.nikr.eve.jeveasset.io.esi.AbstractEsiGetter;
-import net.troja.eve.esi.api.UserInterfaceApi;
+import net.nikr.eve.jeveasset.esi.api.UserInterfaceApi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -22,9 +22,9 @@ package net.nikr.eve.jeveasset.data.raw;
 
 import net.nikr.eve.jeveasset.TestUtil;
 import net.nikr.eve.jeveasset.data.api.raw.RawContractItem;
-import net.troja.eve.esi.model.CharacterContractsItemsResponse;
-import net.troja.eve.esi.model.CorporationContractsItemsResponse;
-import net.troja.eve.esi.model.PublicContractsItemsResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterContractsItemsResponse;
+import net.nikr.eve.jeveasset.esi.model.CorporationContractsItemsResponse;
+import net.nikr.eve.jeveasset.esi.model.PublicContractsItemsResponse;
 import org.junit.Test;
 
 

@@ -29,13 +29,13 @@ import net.nikr.eve.jeveasset.data.sde.ItemFlag;
 import net.nikr.eve.jeveasset.i18n.General;
 import net.nikr.eve.jeveasset.io.shared.ApiIdConverter;
 import net.nikr.eve.jeveasset.io.shared.RawConverter;
-import net.troja.eve.esi.model.CharacterAssetsResponse;
-import net.troja.eve.esi.model.CharacterLocationResponse;
-import net.troja.eve.esi.model.CharacterPlanetsResponse;
-import net.troja.eve.esi.model.CharacterShipResponse;
-import net.troja.eve.esi.model.CorporationAssetsResponse;
-import net.troja.eve.esi.model.PlanetContent;
-import net.troja.eve.esi.model.PlanetPin;
+import net.nikr.eve.jeveasset.esi.model.CharacterAssetsResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterLocationResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterPlanetsResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterShipResponse;
+import net.nikr.eve.jeveasset.esi.model.CorporationAssetsResponse;
+import net.nikr.eve.jeveasset.esi.model.PlanetContent;
+import net.nikr.eve.jeveasset.esi.model.PlanetPin;
 
 public class RawAsset {
 

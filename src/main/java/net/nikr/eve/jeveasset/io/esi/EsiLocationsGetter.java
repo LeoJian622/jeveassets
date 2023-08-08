@@ -31,11 +31,11 @@ import net.nikr.eve.jeveasset.data.settings.Citadel.CitadelSource;
 import net.nikr.eve.jeveasset.data.settings.Settings;
 import net.nikr.eve.jeveasset.gui.dialogs.update.UpdateTask;
 import net.nikr.eve.jeveasset.io.online.CitadelGetter;
-import net.troja.eve.esi.ApiException;
-import net.troja.eve.esi.ApiResponse;
-import net.troja.eve.esi.model.CharacterAssetsNamesResponse;
-import net.troja.eve.esi.model.CharacterRolesResponse.RolesEnum;
-import net.troja.eve.esi.model.CorporationAssetsNamesResponse;
+import net.nikr.eve.jeveasset.esi.ApiException;
+import net.nikr.eve.jeveasset.esi.ApiResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterAssetsNamesResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterRolesResponse.RolesEnum;
+import net.nikr.eve.jeveasset.esi.model.CorporationAssetsNamesResponse;
 
 
 public class EsiLocationsGetter extends AbstractEsiGetter {

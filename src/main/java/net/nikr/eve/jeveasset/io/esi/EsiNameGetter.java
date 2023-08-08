@@ -36,10 +36,10 @@ import net.nikr.eve.jeveasset.data.settings.Settings;
 import net.nikr.eve.jeveasset.gui.dialogs.update.UpdateTask;
 import net.nikr.eve.jeveasset.gui.shared.Updatable;
 import net.nikr.eve.jeveasset.io.shared.ApiIdConverter;
-import net.troja.eve.esi.ApiException;
-import net.troja.eve.esi.ApiResponse;
-import net.troja.eve.esi.model.CharacterRolesResponse.RolesEnum;
-import net.troja.eve.esi.model.UniverseNamesResponse;
+import net.nikr.eve.jeveasset.esi.ApiException;
+import net.nikr.eve.jeveasset.esi.ApiResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterRolesResponse.RolesEnum;
+import net.nikr.eve.jeveasset.esi.model.UniverseNamesResponse;
 
 
 public class EsiNameGetter extends AbstractEsiGetter {

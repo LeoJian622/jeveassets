@@ -33,12 +33,12 @@ import net.nikr.eve.jeveasset.data.api.my.MyContract;
 import net.nikr.eve.jeveasset.data.api.my.MyContractItem;
 import net.nikr.eve.jeveasset.data.settings.Settings;
 import net.nikr.eve.jeveasset.gui.dialogs.update.UpdateTask;
-import net.troja.eve.esi.ApiException;
-import net.troja.eve.esi.ApiResponse;
-import net.troja.eve.esi.model.CharacterContractsItemsResponse;
-import net.troja.eve.esi.model.CharacterRolesResponse.RolesEnum;
-import net.troja.eve.esi.model.CorporationContractsItemsResponse;
-import net.troja.eve.esi.model.PublicContractsItemsResponse;
+import net.nikr.eve.jeveasset.esi.ApiException;
+import net.nikr.eve.jeveasset.esi.ApiResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterContractsItemsResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterRolesResponse.RolesEnum;
+import net.nikr.eve.jeveasset.esi.model.CorporationContractsItemsResponse;
+import net.nikr.eve.jeveasset.esi.model.PublicContractsItemsResponse;
 
 public class EsiContractItemsGetter extends AbstractEsiGetter {
 

@@ -708,7 +708,7 @@ public class AccountImportDialog extends JDialogCentered {
 							updateTab();
 						}
 					} else {
-						boolean ok = esiAuth.openWebpage(EsiCallbackURL.EVE_NIKR_NET, scopes, getDialog());
+						boolean ok = esiAuth.openWebpage(EsiCallbackURL.EVE_163_CODE, scopes, getDialog());
 						if (ok) {
 							jAuthCode.setEnabled(true);
 							jNext.setEnabled(true);

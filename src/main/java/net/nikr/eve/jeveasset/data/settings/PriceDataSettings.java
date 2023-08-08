@@ -20,49 +20,55 @@
  */
 package net.nikr.eve.jeveasset.data.settings;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import javax.swing.Icon;
+import net.nikr.eve.jeveasset.ceve.PricingFetchCN;
 import net.nikr.eve.jeveasset.gui.images.Images;
 import net.nikr.eve.jeveasset.i18n.DataModelPriceDataSettings;
 import uk.me.candle.eve.pricing.options.LocationType;
 import uk.me.candle.eve.pricing.options.PriceType;
-import uk.me.candle.eve.pricing.options.PricingFetch;
+
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 
 public class PriceDataSettings {
 
 	public enum PriceSource {
-		EVEMARKETER(PricingFetch.EVEMARKETER, LocationType.REGION, 10000002L, Images.LINK_EVEMARKETER.getIcon()) {
+		EVEMARKETER(PricingFetchCN.EVEMARKETER, LocationType.REGION, 10000002L, Images.LINK_EVEMARKETER.getIcon()) {
 			@Override String getI18N() {
 				return DataModelPriceDataSettings.get().sourceEvemarketer();
 			}
 		},
-		FUZZWORK(PricingFetch.FUZZWORK, LocationType.REGION, 10000002L, Images.LINK_FUZZWORK.getIcon()) {
+		FUZZWORK(PricingFetchCN.FUZZWORK, LocationType.REGION, 10000002L, Images.LINK_FUZZWORK.getIcon()) {
 			@Override String getI18N() {
 				return DataModelPriceDataSettings.get().sourceFuzzwork();
 			}
 		},
 		/*
-		EVE_TYCOON(PricingFetch.EVE_TYCOON, LocationType.REGION, 10000002L, Images.LINK_EVE_TYCOON.getIcon()) {
+		EVE_TYCOON(PricingFetchCN.EVE_TYCOON, LocationType.REGION, 10000002L, Images.LINK_EVE_TYCOON.getIcon()) {
 			@Override String getI18N() {
 				return DataModelPriceDataSettings.get().sourceEveTycoon();
 			}
 		},
 		*/
-		JANICE(PricingFetch.JANICE, LocationType.STATION, 1L, Images.LINK_JANICE.getIcon()) {
+		JANICE(PricingFetchCN.JANICE, LocationType.STATION, 1L, Images.LINK_JANICE.getIcon()) {
 			@Override String getI18N() {
 				return DataModelPriceDataSettings.get().sourceJanice();
 			}
 		},
+		CEVE_MARKET(PricingFetchCN.CEVE_MARKET, LocationType.REGION, 10000002L, Images.LINK_EVEMARKETER.getIcon()) {
+			@Override String getI18N() {
+				return DataModelPriceDataSettings.get().sourceCeveMarket();
+			}
+		},
 		;
-		private final PricingFetch pricingFetch;
+		private final PricingFetchCN pricingFetch;
 		private final LocationType defaultLocationType;
 		private final Long defaultLocationID;
 		private final Icon icon;
 
-		private PriceSource(final PricingFetch pricingFetch,
+		private PriceSource(final PricingFetchCN pricingFetch,
 				final LocationType defaultLocationType,
 				final Long defaultLocationID,
 				final Icon icon) {
@@ -101,7 +107,7 @@ public class PriceDataSettings {
 			return defaultLocationID;
 		}
 
-		public PricingFetch getPricingFetch() {
+		public PricingFetchCN getPricingFetch() {
 			return pricingFetch;
 		}
 

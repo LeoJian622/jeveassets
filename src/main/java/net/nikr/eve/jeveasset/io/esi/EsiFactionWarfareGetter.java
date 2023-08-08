@@ -26,11 +26,11 @@ import java.util.List;
 import java.util.Map;
 import net.nikr.eve.jeveasset.data.settings.Settings;
 import net.nikr.eve.jeveasset.gui.dialogs.update.UpdateTask;
-import net.troja.eve.esi.ApiException;
-import net.troja.eve.esi.ApiResponse;
-import net.troja.eve.esi.model.CharacterRolesResponse.RolesEnum;
-import net.troja.eve.esi.model.FactionWarfareSystemsResponse;
-import net.troja.eve.esi.model.FactionsResponse;
+import net.nikr.eve.jeveasset.esi.ApiException;
+import net.nikr.eve.jeveasset.esi.ApiResponse;
+import net.nikr.eve.jeveasset.esi.model.CharacterRolesResponse.RolesEnum;
+import net.nikr.eve.jeveasset.esi.model.FactionWarfareSystemsResponse;
+import net.nikr.eve.jeveasset.esi.model.FactionsResponse;
 
 
 public class EsiFactionWarfareGetter extends AbstractEsiGetter {

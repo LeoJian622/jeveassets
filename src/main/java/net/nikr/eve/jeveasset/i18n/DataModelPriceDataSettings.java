@@ -42,6 +42,7 @@ public abstract class DataModelPriceDataSettings extends Bundle {
 	public abstract String sourceFuzzwork();
 	public abstract String sourceEveTycoon();
 	public abstract String sourceJanice();
+	public abstract String sourceCeveMarket();
 	public abstract String priceSellMax();
 	public abstract String priceSellAvg();
 	public abstract String priceSellMedian();
