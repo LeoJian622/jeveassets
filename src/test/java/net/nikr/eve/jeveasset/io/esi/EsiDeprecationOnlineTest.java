@@ -179,7 +179,7 @@ public class EsiDeprecationOnlineTest extends TestUtil {
 	}
 
 	@Test
-	public void esiTestScopes() {
+	public void testScopes() {
 		OAuth oAuth = (OAuth) API_CLIENT.getAuthentication("evesso");
 		JWT jwt = oAuth.getJWT();
 		assumeTrue(jwt != null);
@@ -305,6 +305,16 @@ public class EsiDeprecationOnlineTest extends TestUtil {
 	}
 
 	@Test
+	public void esiContractItemsGetterPublic() {
+		try {
+			ApiResponse<List<PublicContractsItemsResponse>> apiResponse = CONTRACTS_API.getContractsPublicItemsContractIdWithHttpInfo(1, DATASOURCE, null, null);
+			validate(apiResponse.getHeaders());
+		} catch (ApiException ex) {
+			validate(ex.getResponseHeaders());
+		}
+	}
+
+	@Test
 	public void esiContractsGetterCharacter() {
 		try {
 			ApiResponse<List<CharacterContractsResponse>> apiResponse = CONTRACTS_API.getCharactersCharacterIdContractsWithHttpInfo(1, DATASOURCE, null, null, null);
@@ -335,9 +345,9 @@ public class EsiDeprecationOnlineTest extends TestUtil {
 	}
 
 	@Test
-	public void esiFactionWarfareGetterSystems() {
+	public void esiFactionWarfareGetterFactions() {
 		try {
-			ApiResponse<List<FactionWarfareSystemsResponse>> apiResponse = FACTION_WARFARE_API.getFwSystemsWithHttpInfo(DATASOURCE, null);
+			ApiResponse<List<FactionsResponse>> apiResponse = UNIVERSE_API.getUniverseFactionsWithHttpInfo(null, DATASOURCE, null, null);
 			validate(apiResponse.getHeaders());
 		} catch (ApiException ex) {
 			validate(ex.getResponseHeaders());
@@ -345,9 +355,9 @@ public class EsiDeprecationOnlineTest extends TestUtil {
 	}
 
 	@Test
-	public void esiFactionWarfareGetterFactions() {
+	public void esiFactionWarfareGetterSystems() {
 		try {
-			ApiResponse<List<FactionsResponse>> apiResponse = UNIVERSE_API.getUniverseFactionsWithHttpInfo(null, DATASOURCE, null, null);
+			ApiResponse<List<FactionWarfareSystemsResponse>> apiResponse = FACTION_WARFARE_API.getFwSystemsWithHttpInfo(DATASOURCE, null);
 			validate(apiResponse.getHeaders());
 		} catch (ApiException ex) {
 			validate(ex.getResponseHeaders());
@@ -375,9 +385,9 @@ public class EsiDeprecationOnlineTest extends TestUtil {
 	}
 
 	@Test
-	public void esiItemsGetterTypes() {
+	public void esiItemsGetterCategories() {
 		try {
-			ApiResponse<TypeResponse> apiResponse = UNIVERSE_API.getUniverseTypesTypeIdWithHttpInfo(1, null, DATASOURCE, null, null);
+			ApiResponse<CategoryResponse> apiResponse = UNIVERSE_API.getUniverseCategoriesCategoryIdWithHttpInfo(1, null, DATASOURCE, null, null);
 			validate(apiResponse.getHeaders());
 		} catch (ApiException ex) {
 			validate(ex.getResponseHeaders());
@@ -395,9 +405,9 @@ public class EsiDeprecationOnlineTest extends TestUtil {
 	}
 
 	@Test
-	public void esiItemsGetterCategories() {
+	public void esiItemsGetterMarketGroups() {
 		try {
-			ApiResponse<CategoryResponse> apiResponse = UNIVERSE_API.getUniverseCategoriesCategoryIdWithHttpInfo(1, null, DATASOURCE, null, null);
+			ApiResponse<MarketGroupResponse> apiResponse = MARKET_API.getMarketsGroupsMarketGroupIdWithHttpInfo(1, null, DATASOURCE, null, null);
 			validate(apiResponse.getHeaders());
 		} catch (ApiException ex) {
 			validate(ex.getResponseHeaders());
@@ -405,9 +415,9 @@ public class EsiDeprecationOnlineTest extends TestUtil {
 	}
 
 	@Test
-	public void esiItemsGetterMarketGroups() {
+	public void esiItemsGetterTypes() {
 		try {
-			ApiResponse<MarketGroupResponse> apiResponse = MARKET_API.getMarketsGroupsMarketGroupIdWithHttpInfo(1, null, DATASOURCE, null, null);
+			ApiResponse<TypeResponse> apiResponse = UNIVERSE_API.getUniverseTypesTypeIdWithHttpInfo(1, null, DATASOURCE, null, null);
 			validate(apiResponse.getHeaders());
 		} catch (ApiException ex) {
 			validate(ex.getResponseHeaders());
@@ -455,6 +465,26 @@ public class EsiDeprecationOnlineTest extends TestUtil {
 	}
 
 	@Test
+	public void esiManufacturingPricesIndustrySystems() {
+		try {
+			ApiResponse<List<IndustrySystemsResponse>> apiResponse = INDUSTRY_API.getIndustrySystemsWithHttpInfo(DATASOURCE, null);
+			validate(apiResponse.getHeaders());
+		} catch (ApiException ex) {
+			validate(ex.getResponseHeaders());
+		}
+	}
+
+	@Test
+	public void esiManufacturingPricesMarketsPrices() {
+		try {
+			ApiResponse<List<MarketPricesResponse>> apiResponse = MARKET_API.getMarketsPricesWithHttpInfo(DATASOURCE, null);
+			validate(apiResponse.getHeaders());
+		} catch (ApiException ex) {
+			validate(ex.getResponseHeaders());
+		}
+	}
+
+	@Test
 	public void esiMarketOrdersGetterCharacter() {
 		try {
 			ApiResponse<List<CharacterOrdersResponse>> apiResponse = MARKET_API.getCharactersCharacterIdOrdersWithHttpInfo(1, DATASOURCE, null, null);
@@ -465,9 +495,9 @@ public class EsiDeprecationOnlineTest extends TestUtil {
 	}
 
 	@Test
-	public void esiMarketOrdersHistoryGetterCharacter() {
+	public void esiMarketOrdersGetterCorporation() {
 		try {
-			ApiResponse<List<CharacterOrdersHistoryResponse>> apiResponse = MARKET_API.getCharactersCharacterIdOrdersHistoryWithHttpInfo(1, DATASOURCE, null, null, null);
+			ApiResponse<List<CorporationOrdersResponse>> apiResponse = MARKET_API.getCorporationsCorporationIdOrdersWithHttpInfo(1, DATASOURCE, null, null, null);
 			validate(apiResponse.getHeaders());
 		} catch (ApiException ex) {
 			validate(ex.getResponseHeaders());
@@ -475,9 +505,9 @@ public class EsiDeprecationOnlineTest extends TestUtil {
 	}
 
 	@Test
-	public void esiMarketOrdersGetterCorporation() {
+	public void esiMarketOrdersHistoryGetterCharacter() {
 		try {
-			ApiResponse<List<CorporationOrdersResponse>> apiResponse = MARKET_API.getCorporationsCorporationIdOrdersWithHttpInfo(1, DATASOURCE, null, null, null);
+			ApiResponse<List<CharacterOrdersHistoryResponse>> apiResponse = MARKET_API.getCharactersCharacterIdOrdersHistoryWithHttpInfo(1, DATASOURCE, null, null, null);
 			validate(apiResponse.getHeaders());
 		} catch (ApiException ex) {
 			validate(ex.getResponseHeaders());
@@ -515,16 +545,6 @@ public class EsiDeprecationOnlineTest extends TestUtil {
 	}
 
 	@Test
-	public void esiMiningGetterCorporationObservers() {
-		try {
-			ApiResponse<List<CorporationMiningObserversResponse>> apiResponse = INDUSTRY_API.getCorporationCorporationIdMiningObserversWithHttpInfo(1, DATASOURCE, null, null, null);
-			validate(apiResponse.getHeaders());
-		} catch (ApiException ex) {
-			validate(ex.getResponseHeaders());
-		}
-	}
-
-	@Test
 	public void esiMiningGetterCorporationObserver() {
 		try {
 			ApiResponse<List<CorporationMiningObserverResponse>> apiResponse = INDUSTRY_API.getCorporationCorporationIdMiningObserversObserverIdWithHttpInfo(1, 1L, DATASOURCE, null, null, null);
@@ -535,9 +555,9 @@ public class EsiDeprecationOnlineTest extends TestUtil {
 	}
 
 	@Test
-	public void esiPublicMarketOrdersGetterStructureOrders() {
+	public void esiMiningGetterCorporationObservers() {
 		try {
-			ApiResponse<List<MarketStructuresResponse>> apiResponse = MARKET_API.getMarketsStructuresStructureIdWithHttpInfo(1L, DATASOURCE, null, null, null);
+			ApiResponse<List<CorporationMiningObserversResponse>> apiResponse = INDUSTRY_API.getCorporationCorporationIdMiningObserversWithHttpInfo(1, DATASOURCE, null, null, null);
 			validate(apiResponse.getHeaders());
 		} catch (ApiException ex) {
 			validate(ex.getResponseHeaders());
@@ -545,19 +565,9 @@ public class EsiDeprecationOnlineTest extends TestUtil {
 	}
 
 	@Test
-	public void esiPublicMarketOrdersGetterPublicStructures() {
+	public void esiMiningGetterMoons() {
 		try {
-			ApiResponse<List<Long>> apiResponse = UNIVERSE_API.getUniverseStructuresWithHttpInfo(DATASOURCE, null, null);
-			validate(apiResponse.getHeaders());
-		} catch (ApiException ex) {
-			validate(ex.getResponseHeaders());
-		}
-	}
-
-	@Test
-	public void esiPublicMarketOrdersGetterPublicOrders() {
-		try {
-			ApiResponse<List<MarketOrdersResponse>> apiResponse = MARKET_API.getMarketsRegionIdOrdersWithHttpInfo("all", 1, DATASOURCE, null, null, null);
+			ApiResponse<MoonResponse> apiResponse = UNIVERSE_API.getUniverseMoonsMoonIdWithHttpInfo(1, DATASOURCE, null);
 			validate(apiResponse.getHeaders());
 		} catch (ApiException ex) {
 			validate(ex.getResponseHeaders());
@@ -577,7 +587,7 @@ public class EsiDeprecationOnlineTest extends TestUtil {
 	@Test
 	public void esiOwnerGetterCharacter() {
 		try {
-			ApiResponse<CharacterResponse> apiResponse = CHARACTER_API.getCharactersCharacterIdWithHttpInfo(1, DATASOURCE, null);
+			ApiResponse<List<CharacterAffiliationResponse>> apiResponse = CHARACTER_API.postCharactersAffiliationWithHttpInfo(Collections.singletonList(1), DATASOURCE);
 			validate(apiResponse.getHeaders());
 		} catch (ApiException ex) {
 			validate(ex.getResponseHeaders());
@@ -628,6 +638,36 @@ public class EsiDeprecationOnlineTest extends TestUtil {
 	public void esiPlanetaryInteractionGetterPublicPlanets() {
 		try {
 			ApiResponse<PlanetResponse> apiResponse = UNIVERSE_API.getUniversePlanetsPlanetIdWithHttpInfo(1, DATASOURCE, null);
+			validate(apiResponse.getHeaders());
+		} catch (ApiException ex) {
+			validate(ex.getResponseHeaders());
+		}
+	}
+
+	@Test
+	public void esiPublicMarketOrdersGetterPublicOrders() {
+		try {
+			ApiResponse<List<MarketOrdersResponse>> apiResponse = MARKET_API.getMarketsRegionIdOrdersWithHttpInfo("all", 1, DATASOURCE, null, null, null);
+			validate(apiResponse.getHeaders());
+		} catch (ApiException ex) {
+			validate(ex.getResponseHeaders());
+		}
+	}
+
+	@Test
+	public void esiPublicMarketOrdersGetterPublicStructures() {
+		try {
+			ApiResponse<List<Long>> apiResponse = UNIVERSE_API.getUniverseStructuresWithHttpInfo(DATASOURCE, null, null);
+			validate(apiResponse.getHeaders());
+		} catch (ApiException ex) {
+			validate(ex.getResponseHeaders());
+		}
+	}
+
+	@Test
+	public void esiPublicMarketOrdersGetterStructureOrders() {
+		try {
+			ApiResponse<List<MarketStructuresResponse>> apiResponse = MARKET_API.getMarketsStructuresStructureIdWithHttpInfo(1L, DATASOURCE, null, null, null);
 			validate(apiResponse.getHeaders());
 		} catch (ApiException ex) {
 			validate(ex.getResponseHeaders());
@@ -735,7 +775,7 @@ public class EsiDeprecationOnlineTest extends TestUtil {
 	}
 
 	@Test
-	public void esiHeaders() {
+	public void headers() {
 		MetaApi api = new MetaApi();
 		try {
 			Map<String, String> headers = api.getHeaders();

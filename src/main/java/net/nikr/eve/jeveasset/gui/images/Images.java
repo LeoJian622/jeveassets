@@ -65,6 +65,7 @@ public enum Images {
 	EDIT_SET ("edit_set.png"),
 	EDIT_IMPORT ("edit_import.png"),
 	EDIT_EDIT_WHITE ("edit_edit_white.png"),
+	EDIT_EDIT_BACKGROUND ("edit_edit_background.png"),
 	EDIT_REDO ("edit_redo.png"),
 	EDIT_UNDO ("edit_undo.png"),
 	EDIT_SHOW ("edit_show.png"),
@@ -100,7 +101,6 @@ public enum Images {
 	LINK_EVEMARKETER ("link_evemarketer.png"),
 	LINK_EVE_MARKETDATA ("link_eve_marketdata.png"),
 	LINK_EVEINFO ("link_eveinfo.png"),
-	LINK_EVEPRAISAL ("link_evepraisal.png"),
 	LINK_DOTLAN_EVEMAPS ("link_dotlan_evemaps.png"),
 	LINK_LOOKUP ("link_lookup.png"),
 	LINK_CHRUKER ("link_chruker.png"),
@@ -190,6 +190,8 @@ public enum Images {
 	MISC_SOUNDS ("misc_sounds.png"),
 	MISC_PLAY ("misc_play.png"),
 	MISC_STOP ("misc_stop.png"),
+	MISC_PARTNER ("misc_partner.png"),
+	MISC_PARTYPARROT ("misc_partyparrot.gif"),
 
 	SETTINGS_TOOLS ("settings_tools.png"),
 	SETTINGS_PRICE_DATA ("settings_price_data.png"),
@@ -206,6 +208,7 @@ public enum Images {
 	SETTINGS_COLOR_CHECK_WHITE_ALPHA ("settings_color_check_white_alpha.png"),
 	SETTINGS_COLOR_FOREGROUND ("settings_color_foreground.png"),
 	SETTINGS_COLOR_BACKGROUND ("settings_color_background.png"),
+	SETTINGS_MANUFACTURING ("settings_manufacturing.png"),
 
 	SLOTS_CONTRACTS ("slots_contracts.png"),
 	SLOTS_CONTRACTS_CORP ("slots_contracts_corp.png"),
@@ -248,6 +251,7 @@ public enum Images {
 	TOOL_MINING ("tool_mining.png"),
 	TOOL_MINING_LOG ("tool_mining_log.png"),
 	TOOL_MINING_GRAPH ("tool_mining_graph.png"),
+	TOOL_EXTRACTIONS ("tool_extractions.png"),
 
 	UPDATE_NOT_STARTED ("update_not_started.png"),
 	UPDATE_WORKING ("update_working.png"),
