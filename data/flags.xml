@@ -138,5 +138,5 @@
     <row flagid="181" flagname="SpecializedIceHold" flagtext="冰矿舱"/>
     <row flagid="182" flagname="SpecializedAsteroidHold" flagtext="矿石仓"/>
     <row flagid="183" flagname="MobileDepot" flagtext="移动仓库"/>
-    <row flagid="184" flagname="CorpProjectsHangar" flagtext="军团项目机库"/>
+    <row flagid="184" flagname="CorpProjectsHangar" flagtext="项目机库"/>
 </rows>
