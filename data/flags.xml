@@ -64,14 +64,14 @@
     <row flagid="89" flagname="Implant" flagtext="植入物"/>
     <row flagid="90" flagname="ShipHangar" flagtext="舰船机库"/>
     <row flagid="91" flagname="ShipOffline" flagtext="舰船离线"/>
-    <row flagid="92" flagname="RigSlot0" flagtext="Rig power slot 1"/>
-    <row flagid="93" flagname="RigSlot1" flagtext="Rig power slot 2"/>
-    <row flagid="94" flagname="RigSlot2" flagtext="Rig power slot 3"/>
-    <row flagid="95" flagname="RigSlot3" flagtext="Rig power slot 4"/>
-    <row flagid="96" flagname="RigSlot4" flagtext="Rig power slot 5"/>
-    <row flagid="97" flagname="RigSlot5" flagtext="Rig power slot 6"/>
-    <row flagid="98" flagname="RigSlot6" flagtext="Rig power slot 7"/>
-    <row flagid="99" flagname="RigSlot7" flagtext="Rig power slot 8"/>
+    <row flagid="92" flagname="RigSlot0" flagtext="改装件 1"/>
+    <row flagid="93" flagname="RigSlot1" flagtext="改装件 2"/>
+    <row flagid="94" flagname="RigSlot2" flagtext="改装件 3"/>
+    <row flagid="95" flagname="RigSlot3" flagtext="改装件 4"/>
+    <row flagid="96" flagname="RigSlot4" flagtext="改装件 5"/>
+    <row flagid="97" flagname="RigSlot5" flagtext="改装件 6"/>
+    <row flagid="98" flagname="RigSlot6" flagtext="改装件 7"/>
+    <row flagid="99" flagname="RigSlot7" flagtext="改装件 8"/>
     <row flagid="115" flagname="CorpSAG1" flagtext="军团安全访问组 1"/>
     <row flagid="116" flagname="CorpSAG2" flagtext="军团安全访问组 2"/>
     <row flagid="117" flagname="CorpSAG3" flagtext="军团安全访问组 3"/>
