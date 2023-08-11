@@ -53,37 +53,8 @@ import net.nikr.eve.jeveasset.data.api.raw.RawMining;
 import net.nikr.eve.jeveasset.data.api.raw.RawPublicMarketOrder;
 import net.nikr.eve.jeveasset.data.api.raw.RawSkill;
 import net.nikr.eve.jeveasset.data.api.raw.RawTransaction;
+import net.nikr.eve.jeveasset.esi.model.*;
 import net.nikr.eve.jeveasset.io.shared.DataConverter;
-import net.nikr.eve.jeveasset.esi.model.CharacterAssetsResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterBlueprintsResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterContractsItemsResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterContractsResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterIndustryJobsResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterLocationResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterMiningResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterOrdersHistoryResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterOrdersResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterPlanetsResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterShipResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterWalletJournalResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterWalletTransactionsResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationAssetsResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationBlueprintsResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationContractsItemsResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationContractsResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationDivisionsHangar;
-import net.nikr.eve.jeveasset.esi.model.CorporationDivisionsWallet;
-import net.nikr.eve.jeveasset.esi.model.CorporationIndustryJobsResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationOrdersHistoryResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationOrdersResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationWalletJournalResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationWalletTransactionsResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationWalletsResponse;
-import net.nikr.eve.jeveasset.esi.model.MarketOrdersResponse;
-import net.nikr.eve.jeveasset.esi.model.PlanetContent;
-import net.nikr.eve.jeveasset.esi.model.PlanetPin;
-import net.nikr.eve.jeveasset.esi.model.PublicContractsItemsResponse;
-import net.nikr.eve.jeveasset.esi.model.Skill;
 
 
 public class EsiConverter extends DataConverter {

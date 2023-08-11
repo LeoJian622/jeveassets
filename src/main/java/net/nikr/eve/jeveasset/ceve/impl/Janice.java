@@ -48,6 +48,7 @@ public class Janice  extends AbstractPricing {
         return types;
     }
 
+    @Override
     public List<Long> getSupportedLocations(LocationType locationType) {
         if (this.getSupportedLocationTypes().contains(locationType)) {
             ArrayList<Long> list = new ArrayList();
@@ -141,7 +142,7 @@ public class Janice  extends AbstractPricing {
 
         while(var7.hasNext()) {
             Map.Entry<String, String> entry = (Map.Entry)var7.next();
-            request.addHeader((String)entry.getKey(), (String)entry.getValue());
+            request.addHeader(entry.getKey(), entry.getValue());
         }
 
         return this.getClient().newCall(request.build());

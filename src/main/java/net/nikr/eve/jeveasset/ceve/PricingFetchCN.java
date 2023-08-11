@@ -1,9 +1,6 @@
 package net.nikr.eve.jeveasset.ceve;
 
-import net.nikr.eve.jeveasset.ceve.impl.EveMarketer;
-import net.nikr.eve.jeveasset.ceve.impl.EveTycoon;
-import net.nikr.eve.jeveasset.ceve.impl.Fuzzwork;
-import net.nikr.eve.jeveasset.ceve.impl.Janice;
+import net.nikr.eve.jeveasset.ceve.impl.*;
 import uk.me.candle.eve.pricing.options.LocationType;
 import uk.me.candle.eve.pricing.options.PriceType;
 import uk.me.candle.eve.pricing.options.PricingOptions;

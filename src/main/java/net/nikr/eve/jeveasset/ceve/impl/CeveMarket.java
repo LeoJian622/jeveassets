@@ -1,10 +1,9 @@
-package net.nikr.eve.jeveasset.ceve;
+package net.nikr.eve.jeveasset.ceve.impl;
 
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonParseException;
 import com.google.gson.reflect.TypeToken;
-import net.nikr.eve.jeveasset.ceve.impl.EveMarketer;
-import net.nikr.eve.jeveasset.ceve.impl.Fuzzwork;
+import net.nikr.eve.jeveasset.ceve.AbstractPricing;
+import net.nikr.eve.jeveasset.ceve.PricingFetchCN;
 import okhttp3.Call;
 import okhttp3.Request;
 import org.json.XML;
@@ -45,7 +44,7 @@ public class CeveMarket extends AbstractPricing {
                 try {
 
                     String xmlString = this.getCall(typeIDs).execute().body().string();
-                    String jsonString = XML.toJSONObject(xmlString).getJSONObject("evec_api").getJSONObject("marketstat").getJSONArray("type").toString();
+                    String jsonString = XML.toJSONObject(xmlString).getJSONObject("evec_api").getJSONObject("marketstat").get("type").toString();
                     List<CeveMarketPrice> results = this.getGSON().fromJson(jsonString, (new TypeToken<List<CeveMarketPrice>>() {
                     }).getType());
                     if (results == null) {
@@ -53,31 +52,22 @@ public class CeveMarket extends AbstractPricing {
                         this.addFailureReasons(typeIDs, "results is null");
                         return returnMap;
                     }
-
-                    Iterator var5 = results.iterator();
-
-                    while(var5.hasNext()) {
-                        CeveMarketPrice item = (CeveMarketPrice) var5.next();
+                    for (CeveMarketPrice item : results) {
                         returnMap.put(item.getTypeID(), item.getPriceContainer());
                     }
-
                     if (typeIDs.size() != returnMap.size()) {
                         List<Integer> errors = new ArrayList(typeIDs);
                         errors.removeAll(returnMap.keySet());
                         PriceContainer container = (new PriceContainer.PriceContainerBuilder()).build();
-                        Iterator var7 = errors.iterator();
 
-                        while(var7.hasNext()) {
-                            Integer typeID = (Integer)var7.next();
-                            returnMap.put(typeID, container);
+                        for (Integer item : errors) {
+                            returnMap.put(item, container);
                         }
                     }
-
-                } catch (IOException | JsonParseException | IllegalArgumentException var7) {
-                    LOG.error("Error fetching price", var7);
-                    this.addFailureReasons(typeIDs, var7.getMessage());
+                } catch (IOException | JsonParseException | IllegalArgumentException ex) {
+                    LOG.error("Error fetching price", ex);
+                    this.addFailureReasons(typeIDs, ex.getMessage());
                 }
-
                 return returnMap;
             }
         }
@@ -85,49 +75,38 @@ public class CeveMarket extends AbstractPricing {
 
     public Call getCall(Collection<Integer> typeIDs) {
         Request.Builder request = (new Request.Builder()).url(this.getURL(typeIDs)).addHeader("User-Agent", this.getPricingOptions().getUserAgent());
-        Iterator var3 = this.getPricingOptions().getHeaders().entrySet().iterator();
-
-        while (var3.hasNext()) {
-            Map.Entry<String, String> entry = (Map.Entry) var3.next();
-            request.addHeader((String) entry.getKey(), (String) entry.getValue());
+        for (Map.Entry<String, String> entry : this.getPricingOptions().getHeaders().entrySet()) {
+            request.addHeader(entry.getKey(), entry.getValue());
         }
         return this.getClient().newCall(request.build());
     }
 
     protected String getURL(Collection<Integer> itemIDs) {
         StringBuilder query = new StringBuilder();
-
         query.append("&typeid=");
         boolean comma = false;
-
-        Integer i;
-        for (Iterator iterator = itemIDs.iterator(); iterator.hasNext(); query.append(i)) {
-            i = (Integer) iterator.next();
+        for (Integer i : itemIDs) {
             if (comma) {
                 query.append("&typeid=");
             } else {
                 comma = true;
             }
-
+            query.append(i);
         }
-
         LocationType locationType = this.getPricingOptions().getLocationType();
         if (locationType == LocationType.STATION) {
             throw new UnsupportedOperationException(locationType + " is not supported by EveMarketer");
-        } else {
-            if (locationType == LocationType.SYSTEM) {
-                query.append("&usesystem=");
-                query.append(this.getPricingOptions().getLocationID());
-            } else {
-                if (locationType != LocationType.REGION) {
-                    throw new UnsupportedOperationException(locationType.name() + " is not supported by EveMarketer");
-                }
-
-                query.append("&regionlimit=");
-                query.append(this.getPricingOptions().getLocationID());
-            }
-            return "https://www.ceve-market.org/api/marketstat?" + query.toString();
         }
+        if (locationType == LocationType.SYSTEM) {
+            query.append("&usesystem=");
+            query.append(this.getPricingOptions().getLocationID());
+        }
+        if (locationType != LocationType.REGION) {
+            throw new UnsupportedOperationException(locationType.name() + " is not supported by EveMarketer");
+        }
+        query.append("&regionlimit=");
+        query.append(this.getPricingOptions().getLocationID());
+        return "https://www.ceve-market.org/api/marketstat?" + query;
     }
 
     @Override
@@ -143,7 +122,7 @@ public class CeveMarket extends AbstractPricing {
 
     @Override
     public List<PriceType> getSupportedPricingTypes() {
-        List<PriceType> types = new ArrayList();
+        List<PriceType> types = new ArrayList<>();
         types.add(PriceType.BUY_MEDIAN);
         types.add(PriceType.BUY_PERCENTILE);
         types.add(PriceType.BUY_HIGH);
@@ -157,7 +136,7 @@ public class CeveMarket extends AbstractPricing {
 
     @Override
     public List<LocationType> getSupportedLocationTypes() {
-        List<LocationType> types = new ArrayList();
+        List<LocationType> types = new ArrayList<>();
         types.add(LocationType.REGION);
         types.add(LocationType.SYSTEM);
         return types;
@@ -165,7 +144,7 @@ public class CeveMarket extends AbstractPricing {
 
     @Override
     public List<Long> getSupportedLocations(LocationType locationType) {
-        return this.getSupportedLocationTypes().contains(locationType) ? new ArrayList() : null;
+        return this.getSupportedLocationTypes().contains(locationType) ? new ArrayList<>() : null;
     }
 
     private static class CeveMarketPriceData {
@@ -182,9 +161,9 @@ public class CeveMarket extends AbstractPricing {
 
 
     private static class CeveMarketPrice {
-         CeveMarketPriceData buy;
-         CeveMarketPriceData sell;
-         Integer id;
+        CeveMarketPriceData buy;
+        CeveMarketPriceData sell;
+        Integer id;
 
         private CeveMarketPrice() {
         }

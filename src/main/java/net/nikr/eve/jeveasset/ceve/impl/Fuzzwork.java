@@ -33,13 +33,14 @@ public class Fuzzwork extends AbstractPricing {
         return PricingFetchCN.FUZZWORK;
     }
 
+    @Override
     protected int getBatchSize() {
         return 1000;
     }
 
     @Override
     public List<PriceType> getSupportedPricingTypes() {
-        List<PriceType> types = new ArrayList();
+        ArrayList<PriceType> types = new ArrayList<>();
         types.add(PriceType.BUY_MEAN);
         types.add(PriceType.BUY_MEDIAN);
         types.add(PriceType.BUY_PERCENTILE);
@@ -55,81 +56,69 @@ public class Fuzzwork extends AbstractPricing {
 
     @Override
     public List<LocationType> getSupportedLocationTypes() {
-        List<LocationType> types = new ArrayList();
+        ArrayList<LocationType> types = new ArrayList<>();
         types.add(LocationType.REGION);
         types.add(LocationType.STATION);
         return types;
     }
 
+    @Override
     public List<Long> getSupportedLocations(LocationType locationType) {
         if (this.getSupportedLocationTypes().contains(locationType)) {
-            if (locationType != LocationType.STATION) {
-                return new ArrayList();
+            if (locationType == LocationType.STATION) {
+                ArrayList<Long> list = new ArrayList<>();
+                list.add(60003760L);
+                list.add(60008494L);
+                list.add(60011866L);
+                list.add(60004588L);
+                list.add(60005686L);
+            } else {
+                return new ArrayList<>();
             }
-
-            List<Long> list = new ArrayList();
-            list.add(60003760L);
-            list.add(60008494L);
-            list.add(60011866L);
-            list.add(60004588L);
-            list.add(60005686L);
         }
-
         return null;
     }
 
+    @Override
     protected Map<Integer, PriceContainer> fetchPrices(Collection<Integer> typeIDs) {
-        Map<Integer, PriceContainer> returnMap = new HashMap();
+        long locationID;
+        HashMap<Integer, PriceContainer> returnMap = new HashMap<>();
         if (typeIDs.isEmpty()) {
             return returnMap;
-        } else if (this.getPricingOptions().getLocation() == null) {
+        }
+        if (this.getPricingOptions().getLocation() == null) {
             throw new UnsupportedOperationException("A location is required for Fuzzwork");
-        } else {
-            LocationType locationType = this.getPricingOptions().getLocationType();
-            if (!this.getSupportedLocationTypes().contains(locationType)) {
-                throw new UnsupportedOperationException(locationType + " is not supported by Fuzzwork");
-            } else {
-                if (locationType == LocationType.STATION) {
-                    long locationID = this.getPricingOptions().getLocationID();
-                    if (locationID != 60003760L && locationID != 60008494L && locationID != 60011866L && locationID != 60004588L && locationID != 60005686L) {
-                        throw new UnsupportedOperationException(locationID + " is not supported by Fuzzwork");
-                    }
-                }
-
-                try {
-                    Map<Integer, FuzzworkPrice> results = (Map)this.getGSON().fromJson(this.getCall(typeIDs).execute().body().string(), (new TypeToken<Map<Integer, FuzzworkPrice>>() {
-                    }).getType());
-                    if (results == null) {
-                        LOG.error("Error fetching price", new Exception("results is null"));
-                        this.addFailureReasons(typeIDs, "results is null");
-                        return returnMap;
-                    }
-
-                    Iterator var5 = results.entrySet().iterator();
-
-                    while(var5.hasNext()) {
-                        Map.Entry<Integer, FuzzworkPrice> entry = (Map.Entry)var5.next();
-                        returnMap.put(entry.getKey(), ((FuzzworkPrice)entry.getValue()).getPriceContainer());
-                    }
-                } catch (IOException | JsonParseException | IllegalArgumentException var7) {
-                    LOG.error("Error fetching price", var7);
-                    this.addFailureReasons(typeIDs, var7.getMessage());
-                }
-
+        }
+        LocationType locationType = this.getPricingOptions().getLocationType();
+        if (!this.getSupportedLocationTypes().contains(locationType)) {
+            throw new UnsupportedOperationException(locationType + " is not supported by Fuzzwork");
+        }
+        if (locationType == LocationType.STATION && (locationID = this.getPricingOptions().getLocationID()) != 60003760L && locationID != 60008494L && locationID != 60011866L && locationID != 60004588L && locationID != 60005686L) {
+            throw new UnsupportedOperationException(locationID + " is not supported by Fuzzwork");
+        }
+        try {
+            Map<Integer,FuzzworkPrice> results = this.getGSON().fromJson(this.getCall(typeIDs).execute().body().string(), new TypeToken<Map<Integer, FuzzworkPrice>>(){}.getType());
+            if (results == null) {
+                LOG.error("Error fetching price", new Exception("results is null"));
+                this.addFailureReasons(typeIDs, "results is null");
                 return returnMap;
             }
+            for (Map.Entry<Integer,FuzzworkPrice> entry : results.entrySet()) {
+                returnMap.put(entry.getKey(), entry.getValue().getPriceContainer());
+            }
         }
+        catch (JsonParseException | IOException | IllegalArgumentException ex) {
+            LOG.error("Error fetching price", ex);
+            this.addFailureReasons(typeIDs, ex.getMessage());
+        }
+        return returnMap;
     }
 
     public Call getCall(Collection<Integer> typeIDs) {
-        Request.Builder request = (new Request.Builder()).url(this.getURL(typeIDs)).addHeader("User-Agent", this.getPricingOptions().getUserAgent());
-        Iterator var3 = this.getPricingOptions().getHeaders().entrySet().iterator();
-
-        while(var3.hasNext()) {
-            Map.Entry<String, String> entry = (Map.Entry)var3.next();
-            request.addHeader((String)entry.getKey(), (String)entry.getValue());
+        Request.Builder request = new Request.Builder().url(this.getURL(typeIDs)).addHeader("User-Agent", this.getPricingOptions().getUserAgent());
+        for (Map.Entry<String, String> entry : this.getPricingOptions().getHeaders().entrySet()) {
+            request.addHeader(entry.getKey(), entry.getValue());
         }
-
         return this.getClient().newCall(request.build());
     }
 
@@ -141,30 +130,23 @@ public class Fuzzwork extends AbstractPricing {
             if (locationID != 60003760L && locationID != 60008494L && locationID != 60011866L && locationID != 60004588L && locationID != 60005686L) {
                 throw new UnsupportedOperationException(locationID + " is not supported by Fuzzwork");
             }
-
             query.append("station=");
             query.append(this.getPricingOptions().getLocationID());
-        } else {
-            if (locationType != LocationType.REGION) {
-                throw new UnsupportedOperationException(locationType.name() + " is not supported by Fuzzwork");
-            }
-
+        } else if (locationType == LocationType.REGION) {
             query.append("region=");
             query.append(this.getPricingOptions().getLocationID());
+        } else {
+            throw new UnsupportedOperationException(locationType.name() + " is not supported by Fuzzwork");
         }
-
         query.append("&types=");
         boolean comma = false;
-
-        for(Iterator var5 = itemIDs.iterator(); var5.hasNext(); comma = true) {
-            Integer i = (Integer)var5.next();
+        for (Integer i : itemIDs) {
             if (comma) {
                 query.append(',');
             }
-
             query.append(i);
+            comma = true;
         }
-
         return "https://market.fuzzwork.co.uk/aggregates/?" + query.toString();
     }
 
@@ -205,3 +187,4 @@ public class Fuzzwork extends AbstractPricing {
         }
     }
 }
+

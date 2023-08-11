@@ -743,10 +743,6 @@
 			</snapshots>
 			<url>https://maven.nikr.net/</url>
 		</repository>
-		<repository>
-			<id>jitpack.io</id>
-			<url>https://jitpack.io</url>
-		</repository>
 	</repositories>
 
 	<dependencies>
@@ -973,6 +969,13 @@
 			<artifactId>json</artifactId>
 			<version>20230618</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/javazoom/jlayer -->
+		<dependency>
+			<groupId>javazoom</groupId>
+			<artifactId>jlayer</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+
 
 	</dependencies>
 

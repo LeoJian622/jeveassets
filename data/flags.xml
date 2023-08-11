@@ -3,21 +3,21 @@
     <!--Generated from Eve Online Toolkit. ©CCP hf. All rights reserved. Used with permission.-->
     <row flagid="0" flagname="None" flagtext="None"/>
     <row flagid="1" flagname="Wallet" flagtext="钱包"/>
-    <row flagid="2" flagname="Offices" flagtext="办公室文件夹"/>
-    <row flagid="3" flagname="Wardrobe" flagtext="衣柜"/>
+    <row flagid="2" flagname="Offices" flagtext="OfficeFolder"/>
+    <row flagid="3" flagname="Wardrobe" flagtext="衣橱"/>
     <row flagid="4" flagname="Hangar" flagtext="机库"/>
-    <row flagid="5" flagname="Cargo" flagtext="快递机库"/>
-    <row flagid="6" flagname="OfficeImpound" flagtext="被扣押"/>
+    <row flagid="5" flagname="Cargo" flagtext="货物"/>
+    <row flagid="6" flagname="OfficeImpound" flagtext="被扣押的办公室"/>
     <row flagid="7" flagname="Skill" flagtext="技能"/>
     <row flagid="8" flagname="Reward" flagtext="奖励"/>
-    <row flagid="11" flagname="LoSlot0" flagtext="低槽1"/>
-    <row flagid="12" flagname="LoSlot1" flagtext="低槽2"/>
-    <row flagid="13" flagname="LoSlot2" flagtext="低槽3"/>
-    <row flagid="14" flagname="LoSlot3" flagtext="低槽4"/>
-    <row flagid="15" flagname="LoSlot4" flagtext="低槽5"/>
-    <row flagid="16" flagname="LoSlot5" flagtext="低槽6"/>
-    <row flagid="17" flagname="LoSlot6" flagtext="低槽7"/>
-    <row flagid="18" flagname="LoSlot7" flagtext="低槽8"/>
+    <row flagid="11" flagname="LoSlot0" flagtext="低槽 1"/>
+    <row flagid="12" flagname="LoSlot1" flagtext="低槽 2"/>
+    <row flagid="13" flagname="LoSlot2" flagtext="低槽 3"/>
+    <row flagid="14" flagname="LoSlot3" flagtext="低槽 4"/>
+    <row flagid="15" flagname="LoSlot4" flagtext="低槽 5"/>
+    <row flagid="16" flagname="LoSlot5" flagtext="低槽 6"/>
+    <row flagid="17" flagname="LoSlot6" flagtext="低槽 7"/>
+    <row flagid="18" flagname="LoSlot7" flagtext="低槽 8"/>
     <row flagid="19" flagname="MedSlot0" flagtext="中槽 1"/>
     <row flagid="20" flagname="MedSlot1" flagtext="中槽 2"/>
     <row flagid="21" flagname="MedSlot2" flagtext="中槽 3"/>
@@ -34,36 +34,36 @@
     <row flagid="32" flagname="HiSlot5" flagtext="高槽 6"/>
     <row flagid="33" flagname="HiSlot6" flagtext="高槽 7"/>
     <row flagid="34" flagname="HiSlot7" flagtext="高槽 8"/>
-    <row flagid="35" flagname="Fixed Slot" flagtext="固定插槽"/>
+    <row flagid="35" flagname="Fixed Slot" flagtext="改装件槽"/>
     <row flagid="36" flagname="AssetSafety" flagtext="资产安全"/>
     <row flagid="56" flagname="Capsule" flagtext="太空舱"/>
     <row flagid="57" flagname="Pilot" flagtext="飞行员"/>
-    <row flagid="61" flagname="Skill In Training" flagtext="训练中的技能"/>
-    <row flagid="62" flagname="CorpMarket" flagtext="Corporation Market Deliveries / Returns"/>
-    <row flagid="63" flagname="Locked" flagtext="锁定物品，除非解锁，否则无法移动"/>
-    <row flagid="64" flagname="Unlocked" flagtext="未锁定物品, 可以移动"/>
-    <row flagid="70" flagname="办公室插槽1" flagtext="办公室插槽1"/>
-    <row flagid="71" flagname="办公室插槽2" flagtext="办公室插槽2"/>
-    <row flagid="72" flagname="办公室插槽3" flagtext="办公室插槽3"/>
-    <row flagid="73" flagname="办公室插槽4" flagtext="办公室插槽4"/>
-    <row flagid="74" flagname="办公室插槽5" flagtext="办公室插槽5"/>
-    <row flagid="75" flagname="办公室插槽6" flagtext="办公室插槽6"/>
-    <row flagid="76" flagname="办公室插槽7" flagtext="办公室插槽7"/>
-    <row flagid="77" flagname="办公室插槽8" flagtext="办公室插槽8"/>
-    <row flagid="78" flagname="办公室插槽9" flagtext="办公室插槽9"/>
-    <row flagid="79" flagname="办公室插槽10" flagtext="办公室插槽10"/>
-    <row flagid="80" flagname="办公室插槽11" flagtext="办公室插槽11"/>
-    <row flagid="81" flagname="办公室插槽12" flagtext="办公室插槽12"/>
-    <row flagid="82" flagname="办公室插槽13" flagtext="办公室插槽13"/>
-    <row flagid="83" flagname="办公室插槽14" flagtext="办公室插槽14"/>
-    <row flagid="84" flagname="办公室插槽15" flagtext="办公室插槽15"/>
-    <row flagid="85" flagname="办公室插槽16" flagtext="办公室插槽16"/>
+    <row flagid="61" flagname="Skill In Training" flagtext="技能培训"/>
+    <row flagid="62" flagname="CorpMarket" flagtext="军团市场交货/退货"/>
+    <row flagid="63" flagname="Locked" flagtext="锁定物品，除非解锁否则无法移动"/>
+    <row flagid="64" flagname="Unlocked" flagtext="已解锁物品，可移动"/>
+    <row flagid="70" flagname="Office Slot 1" flagtext="办公室位置 1"/>
+    <row flagid="71" flagname="Office Slot 2" flagtext="办公室位置 2"/>
+    <row flagid="72" flagname="Office Slot 3" flagtext="办公室位置 3"/>
+    <row flagid="73" flagname="Office Slot 4" flagtext="办公室位置 4"/>
+    <row flagid="74" flagname="Office Slot 5" flagtext="办公室位置 5"/>
+    <row flagid="75" flagname="Office Slot 6" flagtext="办公室位置 6"/>
+    <row flagid="76" flagname="Office Slot 7" flagtext="办公室位置 7"/>
+    <row flagid="77" flagname="Office Slot 8" flagtext="办公室位置 8"/>
+    <row flagid="78" flagname="Office Slot 9" flagtext="办公室位置 9"/>
+    <row flagid="79" flagname="Office Slot 10" flagtext="办公室位置 10"/>
+    <row flagid="80" flagname="Office Slot 11" flagtext="办公室位置 11"/>
+    <row flagid="81" flagname="Office Slot 12" flagtext="办公室位置 12"/>
+    <row flagid="82" flagname="Office Slot 13" flagtext="办公室位置 13"/>
+    <row flagid="83" flagname="Office Slot 14" flagtext="办公室位置 14"/>
+    <row flagid="84" flagname="Office Slot 15" flagtext="办公室位置 15"/>
+    <row flagid="85" flagname="Office Slot 16" flagtext="办公室位置 16"/>
     <row flagid="86" flagname="Bonus" flagtext="赏金"/>
     <row flagid="87" flagname="DroneBay" flagtext="无人机挂舱"/>
-    <row flagid="88" flagname="Booster" flagtext="推进器"/>
-    <row flagid="89" flagname="Implant" flagtext="植入体"/>
-    <row flagid="90" flagname="ShipHangar" flagtext="船舶机库"/>
-    <row flagid="91" flagname="ShipOffline" flagtext="船舶离线"/>
+    <row flagid="88" flagname="Booster" flagtext="助推器"/>
+    <row flagid="89" flagname="Implant" flagtext="植入物"/>
+    <row flagid="90" flagname="ShipHangar" flagtext="舰船机库"/>
+    <row flagid="91" flagname="ShipOffline" flagtext="舰船离线"/>
     <row flagid="92" flagname="RigSlot0" flagtext="Rig power slot 1"/>
     <row flagid="93" flagname="RigSlot1" flagtext="Rig power slot 2"/>
     <row flagid="94" flagname="RigSlot2" flagtext="Rig power slot 3"/>
@@ -72,71 +72,71 @@
     <row flagid="97" flagname="RigSlot5" flagtext="Rig power slot 6"/>
     <row flagid="98" flagname="RigSlot6" flagtext="Rig power slot 7"/>
     <row flagid="99" flagname="RigSlot7" flagtext="Rig power slot 8"/>
-    <row flagid="115" flagname="CorpSAG1" flagtext="Corp Security Access Group 1"/>
-    <row flagid="116" flagname="CorpSAG2" flagtext="Corp Security Access Group 2"/>
-    <row flagid="117" flagname="CorpSAG3" flagtext="Corp Security Access Group 3"/>
-    <row flagid="118" flagname="CorpSAG4" flagtext="Corp Security Access Group 4"/>
-    <row flagid="119" flagname="CorpSAG5" flagtext="Corp Security Access Group 5"/>
-    <row flagid="120" flagname="CorpSAG6" flagtext="Corp Security Access Group 6"/>
-    <row flagid="121" flagname="CorpSAG7" flagtext="Corp Security Access Group 7"/>
-    <row flagid="122" flagname="SecondaryStorage" flagtext="Secondary Storage"/>
-    <row flagid="125" flagname="SubSystem0" flagtext="Sub system slot 0"/>
-    <row flagid="126" flagname="SubSystem1" flagtext="Sub system slot 1"/>
-    <row flagid="127" flagname="SubSystem2" flagtext="Sub system slot 2"/>
-    <row flagid="128" flagname="SubSystem3" flagtext="Sub system slot 3"/>
-    <row flagid="129" flagname="SubSystem4" flagtext="Sub system slot 4"/>
-    <row flagid="130" flagname="SubSystem5" flagtext="Sub system slot 5"/>
-    <row flagid="131" flagname="SubSystem6" flagtext="Sub system slot 6"/>
-    <row flagid="132" flagname="SubSystem7" flagtext="Sub system slot 7"/>
-    <row flagid="133" flagname="SpecializedFuelBay" flagtext="燃料仓"/>
-    <row flagid="134" flagname="SpecializedAsteroidHold" flagtext="矿石仓"/>
-    <row flagid="135" flagname="SpecializedGasHold" flagtext="气云仓"/>
-    <row flagid="136" flagname="SpecializedMineralHold" flagtext="矿物仓"/>
-    <row flagid="137" flagname="SpecializedSalvageHold" flagtext="Specialized Salvage Hold"/>
-    <row flagid="138" flagname="SpecializedShipHold" flagtext="Specialized Ship Hold"/>
-    <row flagid="139" flagname="SpecializedSmallShipHold" flagtext="Specialized Small Ship Hold"/>
-    <row flagid="140" flagname="SpecializedMediumShipHold" flagtext="Specialized Medium Ship Hold"/>
-    <row flagid="141" flagname="SpecializedLargeShipHold" flagtext="Specialized Large Ship Hold"/>
-    <row flagid="142" flagname="SpecializedIndustrialShipHold" flagtext="Specialized Industrial Ship Hold"/>
-    <row flagid="143" flagname="SpecializedAmmoHold" flagtext="Specialized Ammo Hold"/>
-    <row flagid="144" flagname="StructureActive" flagtext="建筑在线"/>
-    <row flagid="145" flagname="StructureInactive" flagtext="Structure Inactive"/>
-    <row flagid="146" flagname="JunkyardReprocessed" flagtext="This item was put into a junkyard through reprocession."/>
-    <row flagid="147" flagname="JunkyardTrashed" flagtext="This item was put into a junkyard through being trashed by its owner."/>
-    <row flagid="148" flagname="SpecializedCommandCenterHold" flagtext="Specialized Command Center Hold"/>
-    <row flagid="149" flagname="SpecializedPlanetaryCommoditiesHold" flagtext="Specialized Planetary Commodities Hold"/>
-    <row flagid="150" flagname="PlanetSurface" flagtext="Planet Surface"/>
-    <row flagid="151" flagname="SpecializedMaterialBay" flagtext="Specialized Material Bay"/>
-    <row flagid="152" flagname="DustCharacterDatabank" flagtext="Dust Character Databank"/>
-    <row flagid="153" flagname="DustCharacterBattle" flagtext="Dust Character Battle"/>
+    <row flagid="115" flagname="CorpSAG1" flagtext="军团安全访问组 1"/>
+    <row flagid="116" flagname="CorpSAG2" flagtext="军团安全访问组 2"/>
+    <row flagid="117" flagname="CorpSAG3" flagtext="军团安全访问组 3"/>
+    <row flagid="118" flagname="CorpSAG4" flagtext="军团安全访问组 4"/>
+    <row flagid="119" flagname="CorpSAG5" flagtext="军团安全访问组 5"/>
+    <row flagid="120" flagname="CorpSAG6" flagtext="军团安全访问组 6"/>
+    <row flagid="121" flagname="CorpSAG7" flagtext="军团安全访问组 7"/>
+    <row flagid="122" flagname="SecondaryStorage" flagtext="辅助存储"/>
+    <row flagid="125" flagname="SubSystem0" flagtext="子系统插槽 0"/>
+    <row flagid="126" flagname="SubSystem1" flagtext="子系统插槽 1"/>
+    <row flagid="127" flagname="SubSystem2" flagtext="子系统插槽 2"/>
+    <row flagid="128" flagname="SubSystem3" flagtext="子系统插槽 3"/>
+    <row flagid="129" flagname="SubSystem4" flagtext="子系统插槽 4"/>
+    <row flagid="130" flagname="SubSystem5" flagtext="子系统插槽 5"/>
+    <row flagid="131" flagname="SubSystem6" flagtext="子系统插槽 6"/>
+    <row flagid="132" flagname="SubSystem7" flagtext="子系统插槽 7"/>
+    <row flagid="133" flagname="SpecializedFuelBay" flagtext="燃料舱"/>
+    <row flagid="134" flagname="SpecializedAsteroidHold" flagtext="矿石舱"/>
+    <row flagid="135" flagname="SpecializedGasHold" flagtext="气云舱"/>
+    <row flagid="136" flagname="SpecializedMineralHold" flagtext="矿物舱"/>
+    <row flagid="137" flagname="SpecializedSalvageHold" flagtext="救生舱"/>
+    <row flagid="138" flagname="SpecializedShipHold" flagtext="专用船舱"/>
+    <row flagid="139" flagname="SpecializedSmallShipHold" flagtext="小型船舶专用货舱"/>
+    <row flagid="140" flagname="SpecializedMediumShipHold" flagtext="中型船舶专用货舱"/>
+    <row flagid="141" flagname="SpecializedLargeShipHold" flagtext="大型船舶专用货舱"/>
+    <row flagid="142" flagname="SpecializedIndustrialShipHold" flagtext="专用工业船坞"/>
+    <row flagid="143" flagname="SpecializedAmmoHold" flagtext="弹药舱"/>
+    <row flagid="144" flagname="StructureActive" flagtext="全能量运行"/>
+    <row flagid="145" flagname="StructureInactive" flagtext="低能量运行"/>
+    <row flagid="146" flagname="JunkyardReprocessed" flagtext="该物品因被转卖而被放入废品站。"/>
+    <row flagid="147" flagname="JunkyardTrashed" flagtext="该物品因被其主人丢弃而被扔进废品站。"/>
+    <row flagid="148" flagname="SpecializedCommandCenterHold" flagtext="指挥中心舱"/>
+    <row flagid="149" flagname="SpecializedPlanetaryCommoditiesHold" flagtext="行星货物舱"/>
+    <row flagid="150" flagname="PlanetSurface" flagtext="行星表面"/>
+    <row flagid="151" flagname="SpecializedMaterialBay" flagtext="专用材料舱"/>
+    <row flagid="152" flagname="DustCharacterDatabank" flagtext="尘埃人物数据库"/>
+    <row flagid="153" flagname="DustCharacterBattle" flagtext="尘埃人物战斗"/>
     <row flagid="154" flagname="QuafeBay" flagtext="Quafe Bay"/>
     <row flagid="155" flagname="FleetHangar" flagtext="舰队机库"/>
-    <row flagid="156" flagname="HiddenModifiers" flagtext="Hidden Modifiers"/>
+    <row flagid="156" flagname="HiddenModifiers" flagtext="隐藏的修饰符"/>
     <row flagid="157" flagname="StructureOffline" flagtext="建筑离线"/>
-    <row flagid="158" flagname="FighterBay" flagtext="Fighter Bay"/>
-    <row flagid="159" flagname="FighterTube0" flagtext="Fighter Tube 0"/>
-    <row flagid="160" flagname="FighterTube1" flagtext="Fighter Tube 1"/>
-    <row flagid="161" flagname="FighterTube2" flagtext="Fighter Tube 2"/>
-    <row flagid="162" flagname="FighterTube3" flagtext="Fighter Tube 3"/>
-    <row flagid="163" flagname="FighterTube4" flagtext="Fighter Tube 4"/>
-    <row flagid="164" flagname="StructureServiceSlot0" flagtext="建筑服务插槽1"/>
-    <row flagid="165" flagname="StructureServiceSlot1" flagtext="建筑服务插槽2"/>
-    <row flagid="166" flagname="StructureServiceSlot2" flagtext="建筑服务插槽3"/>
-    <row flagid="167" flagname="StructureServiceSlot3" flagtext="建筑服务插槽4"/>
-    <row flagid="168" flagname="StructureServiceSlot4" flagtext="建筑服务插槽5"/>
-    <row flagid="169" flagname="StructureServiceSlot5" flagtext="建筑服务插槽6"/>
-    <row flagid="170" flagname="StructureServiceSlot6" flagtext="建筑服务插槽7"/>
-    <row flagid="171" flagname="StructureServiceSlot7" flagtext="建筑服务插槽8"/>
+    <row flagid="158" flagname="FighterBay" flagtext="铁骑舰载机挂舱"/>
+    <row flagid="159" flagname="FighterTube0" flagtext="铁骑舰载机发射管 0"/>
+    <row flagid="160" flagname="FighterTube1" flagtext="铁骑舰载机发射管 1"/>
+    <row flagid="161" flagname="FighterTube2" flagtext="铁骑舰载机发射管 2"/>
+    <row flagid="162" flagname="FighterTube3" flagtext="铁骑舰载机发射管 3"/>
+    <row flagid="163" flagname="FighterTube4" flagtext="铁骑舰载机发射管 4"/>
+    <row flagid="164" flagname="StructureServiceSlot0" flagtext="建筑服务槽 1"/>
+    <row flagid="165" flagname="StructureServiceSlot1" flagtext="建筑服务槽 2"/>
+    <row flagid="166" flagname="StructureServiceSlot2" flagtext="建筑服务槽 3"/>
+    <row flagid="167" flagname="StructureServiceSlot3" flagtext="建筑服务槽 4"/>
+    <row flagid="168" flagname="StructureServiceSlot4" flagtext="建筑服务槽 5"/>
+    <row flagid="169" flagname="StructureServiceSlot5" flagtext="建筑服务槽 6"/>
+    <row flagid="170" flagname="StructureServiceSlot6" flagtext="建筑服务槽 7"/>
+    <row flagid="171" flagname="StructureServiceSlot7" flagtext="建筑服务槽 8"/>
     <row flagid="172" flagname="StructureFuel" flagtext="建筑燃料仓"/>
-    <row flagid="173" flagname="Deliveries" flagtext="Deliveries"/>
-    <row flagid="174" flagname="CrateLoot" flagtext="Crate Loot"/>
-    <row flagid="176" flagname="BoosterBay" flagtext="Booster Hold"/>
-    <row flagid="177" flagname="SubsystemBay" flagtext="Subsystem Hold"/>
-    <row flagid="178" flagname="Raffles" flagtext="Raffles Hangar"/>
+    <row flagid="173" flagname="Deliveries" flagtext="运送"/>
+    <row flagid="174" flagname="CrateLoot" flagtext="战利品箱"/>
+    <row flagid="176" flagname="BoosterBay" flagtext="助推器舱"/>
+    <row flagid="177" flagname="SubsystemBay" flagtext="子系统库"/>
+    <row flagid="178" flagname="Raffles" flagtext="来福士机库"/>
     <row flagid="179" flagname="FrigateEscapeBay" flagtext="护卫舰逃生舱"/>
     <row flagid="180" flagname="StructureDeedBay" flagtext="Structure Deed Bay"/>
-    <row flagid="181" flagname="SpecializedIceHold" flagtext="Specialized Ice Hold"/>
-    <row flagid="182" flagname="SpecializedAsteroidHold" flagtext="Specialized Asteroid Hold"/>
-    <row flagid="183" flagname="MobileDepot" flagtext="Mobile Depot"/>
-    <row flagid="184" flagname="CorpProjectsHangar" flagtext="Corporation Projects Hangar "/>
+    <row flagid="181" flagname="SpecializedIceHold" flagtext="冰矿舱"/>
+    <row flagid="182" flagname="SpecializedAsteroidHold" flagtext="矿石仓"/>
+    <row flagid="183" flagname="MobileDepot" flagtext="移动仓库"/>
+    <row flagid="184" flagname="CorpProjectsHangar" flagtext="军团项目机库"/>
 </rows>

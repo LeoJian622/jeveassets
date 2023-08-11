@@ -52,17 +52,12 @@ import net.nikr.eve.jeveasset.data.settings.PriceData;
 import net.nikr.eve.jeveasset.data.settings.ReprocessSettings;
 import net.nikr.eve.jeveasset.data.settings.Settings;
 import net.nikr.eve.jeveasset.data.settings.UserItem;
+import net.nikr.eve.jeveasset.esi.model.*;
 import net.nikr.eve.jeveasset.gui.shared.Formatter;
 import net.nikr.eve.jeveasset.i18n.General;
 import net.nikr.eve.jeveasset.io.esi.EsiItemsGetter;
 import net.nikr.eve.jeveasset.io.local.ItemsWriter;
 import net.nikr.eve.jeveasset.io.online.CitadelGetter;
-import net.nikr.eve.jeveasset.esi.model.CharacterBookmarkItem;
-import net.nikr.eve.jeveasset.esi.model.CharacterBookmarksResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationBookmarkItem;
-import net.nikr.eve.jeveasset.esi.model.CorporationBookmarksResponse;
-import net.nikr.eve.jeveasset.esi.model.PlanetResponse;
-import net.nikr.eve.jeveasset.esi.model.StructureResponse;
 
 public final class ApiIdConverter {
 
