@@ -20,7 +20,8 @@
  */
 package net.nikr.eve.jeveasset.data.api.raw;
 
-import net.nikr.eve.jeveasset.esi.model.CorporationWalletsResponse;
+
+import net.troja.eve.esi.model.CorporationWalletsResponse;
 
 public class RawAccountBalance {
 

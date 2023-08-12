@@ -22,7 +22,7 @@ package net.nikr.eve.jeveasset.io.esi;
 
 import java.util.Set;
 import net.nikr.eve.jeveasset.i18n.DialoguesAccount;
-import net.nikr.eve.jeveasset.esi.auth.SsoScopes;
+import net.troja.eve.esi.auth.SsoScopes;
 
 public enum EsiScopes {
 

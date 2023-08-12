@@ -23,8 +23,9 @@ package net.nikr.eve.jeveasset.data.api.raw;
 import java.util.Date;
 import net.nikr.eve.jeveasset.i18n.TabsJournal;
 import net.nikr.eve.jeveasset.io.shared.RawConverter;
-import net.nikr.eve.jeveasset.esi.model.CharacterWalletJournalResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationWalletJournalResponse;
+import net.troja.eve.esi.model.CharacterWalletJournalResponse;
+import net.troja.eve.esi.model.CorporationWalletJournalResponse;
+
 
 public class RawJournal {
 

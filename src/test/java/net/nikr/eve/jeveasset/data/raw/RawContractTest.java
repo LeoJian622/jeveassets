@@ -25,8 +25,8 @@ import net.nikr.eve.jeveasset.data.api.raw.RawContract;
 import net.nikr.eve.jeveasset.data.api.raw.RawContract.ContractAvailability;
 import net.nikr.eve.jeveasset.data.api.raw.RawContract.ContractStatus;
 import net.nikr.eve.jeveasset.data.api.raw.RawContract.ContractType;
-import net.nikr.eve.jeveasset.esi.model.CharacterContractsResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationContractsResponse;
+import net.troja.eve.esi.model.CharacterContractsResponse;
+import net.troja.eve.esi.model.CorporationContractsResponse;
 import org.junit.Test;
 
 

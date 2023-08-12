@@ -28,12 +28,12 @@ import net.nikr.eve.jeveasset.data.sde.IndustryMaterial;
 import net.nikr.eve.jeveasset.data.sde.Item;
 import net.nikr.eve.jeveasset.data.sde.StaticData;
 import net.nikr.eve.jeveasset.data.settings.Settings;
-import net.nikr.eve.jeveasset.esi.ApiException;
-import net.nikr.eve.jeveasset.esi.ApiResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterRolesResponse;
-import net.nikr.eve.jeveasset.esi.model.IndustrySystemsResponse;
-import net.nikr.eve.jeveasset.esi.model.MarketPricesResponse;
-import net.nikr.eve.jeveasset.esi.model.SystemCostIndice;
+import net.troja.eve.esi.ApiException;
+import net.troja.eve.esi.ApiResponse;
+import net.troja.eve.esi.model.CharacterRolesResponse;
+import net.troja.eve.esi.model.IndustrySystemsResponse;
+import net.troja.eve.esi.model.MarketPricesResponse;
+import net.troja.eve.esi.model.SystemCostIndice;
 import net.nikr.eve.jeveasset.gui.dialogs.update.UpdateTask;
 import net.nikr.eve.jeveasset.io.shared.ApiIdConverter;
 

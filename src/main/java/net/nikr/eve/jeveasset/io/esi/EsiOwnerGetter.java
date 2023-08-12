@@ -30,14 +30,14 @@ import net.nikr.eve.jeveasset.data.api.accounts.EsiOwner;
 import net.nikr.eve.jeveasset.gui.dialogs.update.UpdateTask;
 import static net.nikr.eve.jeveasset.io.esi.AbstractEsiGetter.DATASOURCE;
 import net.nikr.eve.jeveasset.io.shared.AccountAdder;
-import net.nikr.eve.jeveasset.esi.ApiException;
-import net.nikr.eve.jeveasset.esi.ApiResponse;
-import net.nikr.eve.jeveasset.esi.auth.JWT;
-import net.nikr.eve.jeveasset.esi.auth.OAuth;
-import net.nikr.eve.jeveasset.esi.model.CharacterAffiliationResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterRolesResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterRolesResponse.RolesEnum;
-import net.nikr.eve.jeveasset.esi.model.UniverseNamesResponse;
+import net.troja.eve.esi.ApiException;
+import net.troja.eve.esi.ApiResponse;
+import net.troja.eve.esi.auth.JWT;
+import net.troja.eve.esi.auth.OAuth;
+import net.troja.eve.esi.model.CharacterAffiliationResponse;
+import net.troja.eve.esi.model.CharacterRolesResponse;
+import net.troja.eve.esi.model.CharacterRolesResponse.RolesEnum;
+import net.troja.eve.esi.model.UniverseNamesResponse;
 
 
 public class EsiOwnerGetter extends AbstractEsiGetter implements AccountAdder{

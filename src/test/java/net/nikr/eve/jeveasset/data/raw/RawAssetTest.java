@@ -22,8 +22,8 @@ package net.nikr.eve.jeveasset.data.raw;
 
 import net.nikr.eve.jeveasset.TestUtil;
 import net.nikr.eve.jeveasset.data.api.raw.RawAsset;
-import net.nikr.eve.jeveasset.esi.model.CharacterAssetsResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationAssetsResponse;
+import net.troja.eve.esi.model.CharacterAssetsResponse;
+import net.troja.eve.esi.model.CorporationAssetsResponse;
 import org.junit.Test;
 
 

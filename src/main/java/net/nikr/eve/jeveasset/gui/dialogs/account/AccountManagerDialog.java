@@ -46,7 +46,7 @@ import net.nikr.eve.jeveasset.data.api.accounts.EveApiAccount;
 import net.nikr.eve.jeveasset.data.api.accounts.EveApiOwner;
 import net.nikr.eve.jeveasset.data.api.accounts.EveKitOwner;
 import net.nikr.eve.jeveasset.data.api.accounts.OwnerType;
-import net.nikr.eve.jeveasset.esi.auth.OAuth;
+import net.troja.eve.esi.auth.OAuth;
 import net.nikr.eve.jeveasset.gui.dialogs.account.AccountSeparatorTableCell.AccountCellAction;
 import net.nikr.eve.jeveasset.gui.images.Images;
 import net.nikr.eve.jeveasset.gui.shared.components.JDialogCentered;

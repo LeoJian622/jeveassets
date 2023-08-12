@@ -22,10 +22,10 @@ package net.nikr.eve.jeveasset.data.api.raw;
 
 import java.util.Date;
 import net.nikr.eve.jeveasset.data.api.accounts.OwnerType;
-import net.nikr.eve.jeveasset.esi.model.CharacterMiningResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationMiningObserverResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationMiningObserversResponse;
 import net.nikr.eve.jeveasset.io.shared.RawConverter;
+import net.troja.eve.esi.model.CharacterMiningResponse;
+import net.troja.eve.esi.model.CorporationMiningObserverResponse;
+import net.troja.eve.esi.model.CorporationMiningObserversResponse;
 
 
 public class RawMining {

@@ -25,8 +25,8 @@ import java.util.Objects;
 import net.nikr.eve.jeveasset.data.api.raw.RawMarketOrder.MarketOrderRange;
 import net.nikr.eve.jeveasset.gui.tabs.orders.MarketLog;
 import net.nikr.eve.jeveasset.io.shared.RawConverter;
-import net.nikr.eve.jeveasset.esi.model.MarketOrdersResponse;
-import net.nikr.eve.jeveasset.esi.model.MarketStructuresResponse;
+import net.troja.eve.esi.model.MarketOrdersResponse;
+import net.troja.eve.esi.model.MarketStructuresResponse;
 
 
 public class RawPublicMarketOrder {

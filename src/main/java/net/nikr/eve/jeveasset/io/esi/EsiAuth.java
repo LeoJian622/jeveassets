@@ -30,7 +30,7 @@ import java.util.Set;
 import java.util.UUID;
 import net.nikr.eve.jeveasset.data.api.accounts.EsiOwner;
 import net.nikr.eve.jeveasset.io.shared.DesktopUtil;
-import net.nikr.eve.jeveasset.esi.auth.OAuth;
+import net.troja.eve.esi.auth.OAuth;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

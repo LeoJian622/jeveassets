@@ -53,8 +53,8 @@ import net.nikr.eve.jeveasset.data.api.raw.RawMining;
 import net.nikr.eve.jeveasset.data.api.raw.RawPublicMarketOrder;
 import net.nikr.eve.jeveasset.data.api.raw.RawSkill;
 import net.nikr.eve.jeveasset.data.api.raw.RawTransaction;
-import net.nikr.eve.jeveasset.esi.model.*;
 import net.nikr.eve.jeveasset.io.shared.DataConverter;
+import net.troja.eve.esi.model.*;
 
 
 public class EsiConverter extends DataConverter {

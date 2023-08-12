@@ -67,7 +67,7 @@ import net.nikr.eve.jeveasset.io.esi.EsiCallbackURL;
 import net.nikr.eve.jeveasset.io.shared.ApiIdConverter;
 import net.nikr.eve.jeveasset.io.shared.DataConverter;
 import net.nikr.eve.jeveasset.io.shared.RawConverter;
-import net.nikr.eve.jeveasset.esi.model.CharacterRolesResponse.RolesEnum;
+import net.troja.eve.esi.model.CharacterRolesResponse.RolesEnum;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;

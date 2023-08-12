@@ -24,11 +24,11 @@ import java.util.Date;
 import java.util.List;
 import net.nikr.eve.jeveasset.data.api.accounts.EsiOwner;
 import net.nikr.eve.jeveasset.gui.dialogs.update.UpdateTask;
-import net.nikr.eve.jeveasset.esi.ApiException;
-import net.nikr.eve.jeveasset.esi.ApiResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterBlueprintsResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterRolesResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationBlueprintsResponse;
+import net.troja.eve.esi.ApiException;
+import net.troja.eve.esi.ApiResponse;
+import net.troja.eve.esi.model.CharacterBlueprintsResponse;
+import net.troja.eve.esi.model.CharacterRolesResponse;
+import net.troja.eve.esi.model.CorporationBlueprintsResponse;
 
 
 public class EsiBlueprintsGetter extends AbstractEsiGetter {

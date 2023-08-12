@@ -45,7 +45,7 @@ import net.nikr.eve.jeveasset.data.api.raw.RawBlueprint;
 import net.nikr.eve.jeveasset.data.api.raw.RawMarketOrder.Change;
 import net.nikr.eve.jeveasset.data.profile.Profile;
 import net.nikr.eve.jeveasset.io.shared.RawConverter;
-import net.nikr.eve.jeveasset.esi.model.CharacterRolesResponse.RolesEnum;
+import net.troja.eve.esi.model.CharacterRolesResponse.RolesEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;

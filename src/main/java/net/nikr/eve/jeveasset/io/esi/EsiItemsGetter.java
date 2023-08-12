@@ -27,15 +27,15 @@ import net.nikr.eve.jeveasset.data.settings.Settings;
 import static net.nikr.eve.jeveasset.io.esi.AbstractEsiGetter.DATASOURCE;
 import static net.nikr.eve.jeveasset.io.esi.AbstractEsiGetter.getMarketApiOpen;
 import net.nikr.eve.jeveasset.io.local.ItemsReader;
-import net.nikr.eve.jeveasset.esi.ApiException;
-import net.nikr.eve.jeveasset.esi.ApiResponse;
-import net.nikr.eve.jeveasset.esi.model.CategoryResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterRolesResponse.RolesEnum;
-import net.nikr.eve.jeveasset.esi.model.GroupResponse;
-import net.nikr.eve.jeveasset.esi.model.MarketGroupResponse;
-import net.nikr.eve.jeveasset.esi.model.TypeDogmaAttribute;
-import net.nikr.eve.jeveasset.esi.model.TypeDogmaEffect;
-import net.nikr.eve.jeveasset.esi.model.TypeResponse;
+import net.troja.eve.esi.ApiException;
+import net.troja.eve.esi.ApiResponse;
+import net.troja.eve.esi.model.CategoryResponse;
+import net.troja.eve.esi.model.CharacterRolesResponse.RolesEnum;
+import net.troja.eve.esi.model.GroupResponse;
+import net.troja.eve.esi.model.MarketGroupResponse;
+import net.troja.eve.esi.model.TypeDogmaAttribute;
+import net.troja.eve.esi.model.TypeDogmaEffect;
+import net.troja.eve.esi.model.TypeResponse;
 
 
 public class EsiItemsGetter extends AbstractEsiGetter {

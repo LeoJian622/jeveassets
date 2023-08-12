@@ -52,7 +52,7 @@ import net.nikr.eve.jeveasset.data.settings.PriceData;
 import net.nikr.eve.jeveasset.data.settings.ReprocessSettings;
 import net.nikr.eve.jeveasset.data.settings.Settings;
 import net.nikr.eve.jeveasset.data.settings.UserItem;
-import net.nikr.eve.jeveasset.esi.model.*;
+import net.troja.eve.esi.model.*;
 import net.nikr.eve.jeveasset.gui.shared.Formatter;
 import net.nikr.eve.jeveasset.i18n.General;
 import net.nikr.eve.jeveasset.io.esi.EsiItemsGetter;

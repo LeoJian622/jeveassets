@@ -20,8 +20,8 @@
  */
 package net.nikr.eve.jeveasset.data.api.raw;
 
-import net.nikr.eve.jeveasset.esi.model.Skill;
 
+import net.troja.eve.esi.model.Skill;
 
 public class RawSkill {
 	private Integer activeSkillLevel;

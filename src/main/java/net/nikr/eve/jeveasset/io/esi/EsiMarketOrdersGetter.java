@@ -25,13 +25,13 @@ import java.util.List;
 import net.nikr.eve.jeveasset.data.api.accounts.EsiOwner;
 import net.nikr.eve.jeveasset.gui.dialogs.update.UpdateTask;
 import static net.nikr.eve.jeveasset.io.esi.AbstractEsiGetter.DATASOURCE;
-import net.nikr.eve.jeveasset.esi.ApiException;
-import net.nikr.eve.jeveasset.esi.ApiResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterOrdersHistoryResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterOrdersResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterRolesResponse.RolesEnum;
-import net.nikr.eve.jeveasset.esi.model.CorporationOrdersHistoryResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationOrdersResponse;
+import net.troja.eve.esi.ApiException;
+import net.troja.eve.esi.ApiResponse;
+import net.troja.eve.esi.model.CharacterOrdersHistoryResponse;
+import net.troja.eve.esi.model.CharacterOrdersResponse;
+import net.troja.eve.esi.model.CharacterRolesResponse.RolesEnum;
+import net.troja.eve.esi.model.CorporationOrdersHistoryResponse;
+import net.troja.eve.esi.model.CorporationOrdersResponse;
 
 
 public class EsiMarketOrdersGetter extends AbstractEsiGetter {

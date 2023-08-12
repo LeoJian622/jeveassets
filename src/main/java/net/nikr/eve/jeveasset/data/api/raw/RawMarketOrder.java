@@ -26,10 +26,10 @@ import java.util.Set;
 import java.util.TreeSet;
 import net.nikr.eve.jeveasset.i18n.TabsOrders;
 import net.nikr.eve.jeveasset.io.shared.RawConverter;
-import net.nikr.eve.jeveasset.esi.model.CharacterOrdersHistoryResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterOrdersResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationOrdersHistoryResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationOrdersResponse;
+import net.troja.eve.esi.model.CharacterOrdersHistoryResponse;
+import net.troja.eve.esi.model.CharacterOrdersResponse;
+import net.troja.eve.esi.model.CorporationOrdersHistoryResponse;
+import net.troja.eve.esi.model.CorporationOrdersResponse;
 
 public class RawMarketOrder {
 

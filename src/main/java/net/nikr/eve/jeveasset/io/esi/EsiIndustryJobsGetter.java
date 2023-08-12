@@ -28,11 +28,11 @@ import java.util.Map;
 import java.util.Set;
 import net.nikr.eve.jeveasset.data.api.accounts.EsiOwner;
 import net.nikr.eve.jeveasset.gui.dialogs.update.UpdateTask;
-import net.nikr.eve.jeveasset.esi.ApiException;
-import net.nikr.eve.jeveasset.esi.ApiResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterIndustryJobsResponse;
-import net.nikr.eve.jeveasset.esi.model.CharacterRolesResponse.RolesEnum;
-import net.nikr.eve.jeveasset.esi.model.CorporationIndustryJobsResponse;
+import net.troja.eve.esi.ApiException;
+import net.troja.eve.esi.ApiResponse;
+import net.troja.eve.esi.model.CharacterIndustryJobsResponse;
+import net.troja.eve.esi.model.CharacterRolesResponse.RolesEnum;
+import net.troja.eve.esi.model.CorporationIndustryJobsResponse;
 
 
 public class EsiIndustryJobsGetter extends AbstractEsiGetter {

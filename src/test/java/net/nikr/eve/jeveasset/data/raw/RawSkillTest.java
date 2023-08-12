@@ -22,7 +22,7 @@ package net.nikr.eve.jeveasset.data.raw;
 
 import net.nikr.eve.jeveasset.TestUtil;
 import net.nikr.eve.jeveasset.data.api.raw.RawSkill;
-import net.nikr.eve.jeveasset.esi.model.Skill;
+import net.troja.eve.esi.model.Skill;
 import org.junit.Test;
 
 

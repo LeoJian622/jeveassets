@@ -29,7 +29,7 @@ import net.nikr.eve.jeveasset.data.api.raw.RawJournalRefType;
 import net.nikr.eve.jeveasset.data.api.raw.RawMarketOrder;
 import net.nikr.eve.jeveasset.data.sde.ItemFlag;
 import net.nikr.eve.jeveasset.data.sde.StaticData;
-import net.nikr.eve.jeveasset.esi.model.*;
+import net.troja.eve.esi.model.*;
 import net.nikr.eve.jeveasset.io.shared.RawConverter.LocationFlag;
 import org.junit.Test;
 

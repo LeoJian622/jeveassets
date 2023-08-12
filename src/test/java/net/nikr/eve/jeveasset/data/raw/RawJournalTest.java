@@ -24,8 +24,8 @@ package net.nikr.eve.jeveasset.data.raw;
 import net.nikr.eve.jeveasset.TestUtil;
 import net.nikr.eve.jeveasset.data.api.raw.RawJournal;
 import net.nikr.eve.jeveasset.data.api.raw.RawJournal.ContextType;
-import net.nikr.eve.jeveasset.esi.model.CharacterWalletJournalResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationWalletJournalResponse;
+import net.troja.eve.esi.model.CharacterWalletJournalResponse;
+import net.troja.eve.esi.model.CorporationWalletJournalResponse;
 import org.junit.Test;
 
 

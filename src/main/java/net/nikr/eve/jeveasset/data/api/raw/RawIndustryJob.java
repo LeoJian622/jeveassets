@@ -22,8 +22,8 @@ package net.nikr.eve.jeveasset.data.api.raw;
 
 import java.util.Date;
 import net.nikr.eve.jeveasset.io.shared.RawConverter;
-import net.nikr.eve.jeveasset.esi.model.CharacterIndustryJobsResponse;
-import net.nikr.eve.jeveasset.esi.model.CorporationIndustryJobsResponse;
+import net.troja.eve.esi.model.CharacterIndustryJobsResponse;
+import net.troja.eve.esi.model.CorporationIndustryJobsResponse;
 
 public class RawIndustryJob {
 

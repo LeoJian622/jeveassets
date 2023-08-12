@@ -90,15 +90,15 @@ public class EveTycoon extends AbstractPricing {
                 done = 0;
                 for (Map.Entry<Integer, Future<String>> entry : futures.entrySet()) {
                     String body;
-                    Future future = (Future) entry.getValue();
-                    Integer typeID = (Integer) entry.getKey();
+                    Future<String> future = entry.getValue();
+                    Integer typeID = entry.getKey();
                     if (!future.isDone()) continue;
                     ++done;
-                    if (returnMap.containsKey(typeID) || (body = (String) future.get()) == null) continue;
+                    if (returnMap.containsKey(typeID) || (body = future.get()) == null) continue;
                     try {
                         TycoonPrice tycoonPrice = this.getGSON().fromJson(body, TycoonPrice.class);
                         if (tycoonPrice == null) continue;
-                        returnMap.put((Integer) entry.getKey(), tycoonPrice.getPriceContainer());
+                        returnMap.put(entry.getKey(), tycoonPrice.getPriceContainer());
                     } catch (JsonParseException ex) {
                         LOG.error(ex.getMessage(), ex);
                     }
