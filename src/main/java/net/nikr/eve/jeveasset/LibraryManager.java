@@ -98,7 +98,7 @@ public class LibraryManager {
 			files.add("guava-r09.jar");
 			files.add("LGoodDatePicker-11.2.1.jar");
 			files.add("jfreechart-1.5.3.jar");
-			files.add("pricing-3.0.0.jar");
+			files.add("pricing-cn-3.0.0.jar");
 			files.add("routing-2.0.0.jar");
 			files.add("slf4j-api-1.7.36.jar");
 			files.add("log4j-over-slf4j-1.7.36.jar");
@@ -111,7 +111,7 @@ public class LibraryManager {
 			files.add("swagger-annotations-1.6.5.jar");
 			files.add("annotations-13.0.jar");
 			files.add("hamcrest-core-1.3.jar");
-			files.add("eve-esi-4.8.1.jar");
+			files.add("eve-esi-cn-4.8.2-SNAPSHOT.jar");
 			files.add("okio-jvm-3.0.0.jar");
 			files.add("hamcrest-core-1.3.jar");
 			files.add("jaxb-api-2.3.1.jar");

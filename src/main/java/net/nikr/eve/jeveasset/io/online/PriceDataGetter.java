@@ -35,9 +35,6 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import net.nikr.eve.jeveasset.SplashUpdater;
-import net.nikr.eve.jeveasset.ceve.Pricing;
-import net.nikr.eve.jeveasset.ceve.PricingFactoryCN;
-import net.nikr.eve.jeveasset.ceve.PricingListener;
 import net.nikr.eve.jeveasset.data.profile.ProfileData;
 import net.nikr.eve.jeveasset.data.sde.Item;
 import net.nikr.eve.jeveasset.data.sde.StaticData;
@@ -51,11 +48,10 @@ import net.nikr.eve.jeveasset.io.shared.ApiIdConverter;
 import net.nikr.eve.jeveasset.io.shared.FileUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import uk.me.candle.eve.pricing.options.LocationType;
-import uk.me.candle.eve.pricing.options.PriceLocation;
-import uk.me.candle.eve.pricing.options.PriceType;
-import net.nikr.eve.jeveasset.ceve.PricingFetchCN;
-import uk.me.candle.eve.pricing.options.PricingOptions;
+import uk.me.candle.eve.pricing.Pricing;
+import uk.me.candle.eve.pricing.PricingFactory;
+import uk.me.candle.eve.pricing.PricingListener;
+import uk.me.candle.eve.pricing.options.*;
 
 
 public class PriceDataGetter implements PricingListener {
@@ -113,7 +109,7 @@ public class PriceDataGetter implements PricingListener {
 	 * @return available price data
 	 */
 	private Map<Integer, PriceData> processLoad() {
-		Pricing pricing = PricingFactoryCN.getPricing(PricingFetchCN.FUZZWORK, new DefaultPricingOptions());
+		Pricing pricing = PricingFactory.getPricing(PricingFetch.FUZZWORK, new DefaultPricingOptions());
 		LOG.info("Price data loading");
 		for (Item item : StaticData.get().getItems().values()) { //For each typeID
 			if (!item.isMarketGroup()) {
@@ -206,7 +202,7 @@ public class PriceDataGetter implements PricingListener {
 			LOG.info("Price data update new (" + priceSource + "):");
 		}
 
-		Pricing pricing = PricingFactoryCN.getPricing(priceSource.getPricingFetch(), pricingOptions);
+		Pricing pricing = PricingFactory.getPricing(priceSource.getPricingFetch(), pricingOptions);
 
 		pricing.addPricingListener(this);
 

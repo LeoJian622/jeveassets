@@ -20,17 +20,6 @@
  */
 package net.nikr.eve.jeveasset.io.esi;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
 import net.nikr.eve.jeveasset.data.api.accounts.EsiOwner;
 import net.nikr.eve.jeveasset.gui.dialogs.update.UpdateTask;
 import net.nikr.eve.jeveasset.gui.shared.Formatter;
@@ -41,25 +30,18 @@ import net.troja.eve.esi.ApiClient;
 import net.troja.eve.esi.ApiClientBuilder;
 import net.troja.eve.esi.ApiException;
 import net.troja.eve.esi.ApiResponse;
-import net.troja.eve.esi.api.AssetsApi;
-import net.troja.eve.esi.api.BookmarksApi;
-import net.troja.eve.esi.api.CharacterApi;
-import net.troja.eve.esi.api.ContractsApi;
-import net.troja.eve.esi.api.CorporationApi;
-import net.troja.eve.esi.api.FactionWarfareApi;
-import net.troja.eve.esi.api.IndustryApi;
-import net.troja.eve.esi.api.LocationApi;
-import net.troja.eve.esi.api.MarketApi;
-import net.troja.eve.esi.api.PlanetaryInteractionApi;
-import net.troja.eve.esi.api.SkillsApi;
-import net.troja.eve.esi.api.UniverseApi;
-import net.troja.eve.esi.api.UserInterfaceApi;
-import net.troja.eve.esi.api.WalletApi;
+import net.troja.eve.esi.api.*;
 import net.troja.eve.esi.auth.OAuth;
 import net.troja.eve.esi.model.CharacterRolesResponse.RolesEnum;
 import okhttp3.OkHttpClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.*;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 
 
 public abstract class AbstractEsiGetter extends AbstractGetter<EsiOwner> {

@@ -752,9 +752,10 @@
             <artifactId>eve-esi-cn</artifactId>
             <version>4.8.2-SNAPSHOT</version>
         </dependency>
+        <!-- eve-esi-cn https://github.com/LeoJian622/pricing -->
         <dependency>
             <groupId>uk.me.candle</groupId>
-            <artifactId>pricing</artifactId>
+            <artifactId>pricing-cn</artifactId>
             <version>3.0.0</version>
         </dependency>
         <dependency>
@@ -888,6 +889,12 @@
             <groupId>com.udojava</groupId>
             <artifactId>EvalEx</artifactId>
             <version>2.7</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/javazoom/jlayer -->
+        <dependency>
+            <groupId>javazoom</groupId>
+            <artifactId>jlayer</artifactId>
+            <version>1.0.1</version>
         </dependency>
     </dependencies>
 
