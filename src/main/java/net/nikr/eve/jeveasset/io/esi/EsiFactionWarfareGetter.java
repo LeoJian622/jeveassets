@@ -50,7 +50,7 @@ public class EsiFactionWarfareGetter extends AbstractEsiGetter {
 		List<FactionsResponse> factions = update(DEFAULT_RETRIES, new EsiHandler<List<FactionsResponse>>() {
 			@Override
 			public ApiResponse<List<FactionsResponse>> get() throws ApiException {
-				return getUniverseApiOpen().getUniverseFactionsWithHttpInfo(null, DATASOURCE, null, null);
+				return getUniverseApiOpen().getUniverseFactionsWithHttpInfo(null, DATASOURCE, null, LANGUAGE);
 			}
 		});
 		Map<Integer, String> factionNames = new HashMap<>();

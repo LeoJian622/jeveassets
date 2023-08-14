@@ -60,8 +60,8 @@
     <row flagid="85" flagname="Office Slot 16" flagtext="办公室位置 16"/>
     <row flagid="86" flagname="Bonus" flagtext="赏金"/>
     <row flagid="87" flagname="DroneBay" flagtext="无人机挂舱"/>
-    <row flagid="88" flagname="Booster" flagtext="助推器"/>
-    <row flagid="89" flagname="Implant" flagtext="植入物"/>
+    <row flagid="88" flagname="Booster" flagtext="增效剂"/>
+    <row flagid="89" flagname="Implant" flagtext="植入体"/>
     <row flagid="90" flagname="ShipHangar" flagtext="舰船机库"/>
     <row flagid="91" flagname="ShipOffline" flagtext="舰船离线"/>
     <row flagid="92" flagname="RigSlot0" flagtext="改装件 1"/>

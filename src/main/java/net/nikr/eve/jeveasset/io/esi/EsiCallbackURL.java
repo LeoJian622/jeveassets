@@ -22,7 +22,7 @@ package net.nikr.eve.jeveasset.io.esi;
 
 
 public enum EsiCallbackURL {
-	LOCALHOST("https://esi.evepc.163.com/ui/oauth2-redirect.html", "bc90aa496a404724a93f41b4f4e97761"),
+	LOCALHOST("http://localhost:2221", ""),
 	EVE_163_CODE("https://esi.evepc.163.com/ui/oauth2-redirect.html", "bc90aa496a404724a93f41b4f4e97761"),
 
 	;
