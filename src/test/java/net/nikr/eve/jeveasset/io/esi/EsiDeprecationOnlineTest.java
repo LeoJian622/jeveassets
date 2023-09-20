@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
@@ -55,64 +56,16 @@ import net.troja.eve.esi.api.WalletApi;
 import net.troja.eve.esi.auth.JWT;
 import net.troja.eve.esi.auth.JWT.Payload;
 import net.troja.eve.esi.auth.OAuth;
-import net.troja.eve.esi.model.CategoryResponse;
-import net.troja.eve.esi.model.CharacterAffiliationResponse;
-import net.troja.eve.esi.model.CharacterAssetsNamesResponse;
-import net.troja.eve.esi.model.CharacterAssetsResponse;
-import net.troja.eve.esi.model.CharacterBlueprintsResponse;
-import net.troja.eve.esi.model.CharacterBookmarksResponse;
-import net.troja.eve.esi.model.CharacterContractsItemsResponse;
-import net.troja.eve.esi.model.CharacterContractsResponse;
-import net.troja.eve.esi.model.CharacterIndustryJobsResponse;
-import net.troja.eve.esi.model.CharacterLocationResponse;
-import net.troja.eve.esi.model.CharacterMiningResponse;
-import net.troja.eve.esi.model.CharacterOrdersHistoryResponse;
-import net.troja.eve.esi.model.CharacterOrdersResponse;
-import net.troja.eve.esi.model.CharacterPlanetResponse;
-import net.troja.eve.esi.model.CharacterPlanetsResponse;
-import net.troja.eve.esi.model.CharacterRolesResponse;
-import net.troja.eve.esi.model.CharacterShipResponse;
-import net.troja.eve.esi.model.CharacterSkillsResponse;
-import net.troja.eve.esi.model.CharacterWalletJournalResponse;
-import net.troja.eve.esi.model.CharacterWalletTransactionsResponse;
-import net.troja.eve.esi.model.CorporationAssetsNamesResponse;
-import net.troja.eve.esi.model.CorporationAssetsResponse;
-import net.troja.eve.esi.model.CorporationBlueprintsResponse;
-import net.troja.eve.esi.model.CorporationBookmarksResponse;
-import net.troja.eve.esi.model.CorporationContractsItemsResponse;
-import net.troja.eve.esi.model.CorporationContractsResponse;
-import net.troja.eve.esi.model.CorporationDivisionsResponse;
-import net.troja.eve.esi.model.CorporationIndustryJobsResponse;
-import net.troja.eve.esi.model.CorporationMiningExtractionsResponse;
-import net.troja.eve.esi.model.CorporationMiningObserverResponse;
-import net.troja.eve.esi.model.CorporationMiningObserversResponse;
-import net.troja.eve.esi.model.CorporationOrdersHistoryResponse;
-import net.troja.eve.esi.model.CorporationOrdersResponse;
-import net.troja.eve.esi.model.CorporationResponse;
-import net.troja.eve.esi.model.CorporationWalletJournalResponse;
-import net.troja.eve.esi.model.CorporationWalletTransactionsResponse;
-import net.troja.eve.esi.model.CorporationWalletsResponse;
-import net.troja.eve.esi.model.FactionWarfareSystemsResponse;
-import net.troja.eve.esi.model.FactionsResponse;
-import net.troja.eve.esi.model.GroupResponse;
-import net.troja.eve.esi.model.IndustrySystemsResponse;
-import net.troja.eve.esi.model.MarketGroupResponse;
-import net.troja.eve.esi.model.MarketOrdersResponse;
-import net.troja.eve.esi.model.MarketPricesResponse;
-import net.troja.eve.esi.model.MarketStructuresResponse;
-import net.troja.eve.esi.model.MoonResponse;
-import net.troja.eve.esi.model.PlanetResponse;
-import net.troja.eve.esi.model.PublicContractsItemsResponse;
-import net.troja.eve.esi.model.SovereigntyStructuresResponse;
-import net.troja.eve.esi.model.StructureResponse;
-import net.troja.eve.esi.model.TypeResponse;
-import net.troja.eve.esi.model.UniverseNamesResponse;
+import net.troja.eve.esi.model.*;
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 import static org.junit.Assume.assumeTrue;
+
+import net.nikr.eve.jeveasset.io.shared.DesktopUtil;
 import org.junit.Test;
 
 
@@ -155,10 +108,11 @@ public class EsiDeprecationOnlineTest extends TestUtil {
 	 * @param args
 	 * @throws java.io.IOException
 	 * @throws java.net.URISyntaxException
-	 * @throws net.troja.eve.esi.ApiException
+	 * @throws net.nikr.eve.jeveasset.esi.ApiException
 	 */
 	public static void main(final String... args) throws IOException, URISyntaxException, ApiException {
-		final String state = "somesecret";
+		Desktop.getDesktop().browse(new URI("https://login.evepc.163.com/account/logoff"));
+		final String state = "jeveassets";
 		final ApiClient client = new ApiClientBuilder().clientID(EsiCallbackURL.LOCALHOST.getA()).build();
 		final OAuth auth = (OAuth) client.getAuthentication("evesso");
 		final Set<String> scopes = new HashSet<>();

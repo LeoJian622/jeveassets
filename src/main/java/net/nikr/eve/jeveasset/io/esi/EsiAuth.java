@@ -22,6 +22,9 @@ package net.nikr.eve.jeveasset.io.esi;
 
 import java.awt.Window;
 import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
 import java.util.Base64;
 import java.util.Set;
 import java.util.UUID;
@@ -63,6 +66,8 @@ public class EsiAuth {
 			oAuth.setClientId(callbackURL.getA());
 			String state = UUID.randomUUID().toString();
 			String authorizationUri = oAuth.getAuthorizationUri(callbackURL.getUrl(), scopes, state);
+			DesktopUtil.browse("https://login.evepc.163.com/account/logoff", window);
+			Thread.sleep(1000);
 			return DesktopUtil.browse(authorizationUri, window);
 		} catch (Exception ex) {
 			LOG.error(ex.getMessage(), ex);
@@ -81,11 +86,19 @@ public class EsiAuth {
 				return false;
 			}
 		} else {
+			//				code = new String(Base64.getUrlDecoder().decode(authCode), "UTF-8");
+			URL url;
 			try {
-				code = new String(Base64.getUrlDecoder().decode(authCode), "UTF-8");
-			} catch (UnsupportedEncodingException ex) {
+				url = new URL(authCode);
+				String query = url.getQuery();
+				String[] split = query.split("&");
+				authCode = split[0].replace("code=", "");
+			} catch (NullPointerException | MalformedURLException ex) {
+				LOG.error(ex.getMessage(), ex);
 				return false;
 			}
+
+			code = authCode;
 		}
 		try {
 			oAuth.finishFlow(code, "jeveassets");

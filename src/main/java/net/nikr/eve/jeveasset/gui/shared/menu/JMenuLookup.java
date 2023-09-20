@@ -60,6 +60,7 @@ public class JMenuLookup<T> extends JAutoMenu<T> {
 		EVE_COOKBOOK,
 		FUZZWORK_MARKET,
 		EVE_TYCOON,
+		C3Q_MARKET,
 		EVEMAPS_DOTLAN_STATION,
 		EVEMAPS_DOTLAN_PLANET,
 		EVEMAPS_DOTLAN_SYSTEM,
@@ -226,6 +227,26 @@ public class JMenuLookup<T> extends JAutoMenu<T> {
 				return urls;
 			}
 		},
+		C3Q_MARKET() {
+			@Override
+			public Set<String> getLinks(MenuData<?> menuData) {
+				Set<String> urls = new HashSet<>();
+				for (int marketTypeID : menuData.getMarketTypeIDs()) {
+					urls.add("https://www.ceve-market.org/api/market/type/" + marketTypeID + ".xml");
+				}
+				return urls;
+			}
+		},
+		CEVE_MARKET() {
+			@Override
+			public Set<String> getLinks(MenuData<?> menuData) {
+				Set<String> urls = new HashSet<>();
+				for (int marketTypeID : menuData.getMarketTypeIDs()) {
+					urls.add("https://www.ceve-market.org/api/market/type/" + marketTypeID + ".xml");
+				}
+				return urls;
+			}
+		},
 	//Info
 		GAMES_CHRUKER() {
 			@Override
@@ -354,6 +375,7 @@ public class JMenuLookup<T> extends JAutoMenu<T> {
 	private final JMenuItem jEveMarketer;
 	private final JMenuItem jFuzzworkMarket;
 	private final JMenuItem jEveTycoon;
+	private final JMenuItem jC3qMarket;
 	private final JMenu jItemDatabase;
 	private final JMenuItem jFuzzworkItems;
 	private final JMenuItem jChruker;
@@ -489,6 +511,12 @@ public class JMenuLookup<T> extends JAutoMenu<T> {
 		jEveTycoon.addActionListener(listener);
 		jMarket.add(jEveTycoon);
 
+		jC3qMarket = new JMenuItem(GuiShared.get().ceveMarket());
+		jC3qMarket.setIcon(Images.LINK_EVEMARKETER.getIcon());
+		jC3qMarket.setActionCommand(MenuLookupAction.C3Q_MARKET.name());
+		jC3qMarket.addActionListener(listener);
+		jMarket.add(jC3qMarket);
+		
 		jAdam4eve = new JMenuItem(GuiShared.get().adam4eve());
 		jAdam4eve.setIcon(Images.LINK_ADAM4EVE.getIcon());
 		jAdam4eve.setActionCommand(MenuLookupAction.ADAM4EVE.name());
@@ -721,10 +749,12 @@ public class JMenuLookup<T> extends JAutoMenu<T> {
 				DesktopUtil.browse(LookupLinks.EVEMARKETER.getLinks(menuData), program);
 			} else if (MenuLookupAction.ADAM4EVE.name().equals(e.getActionCommand())) {
 				DesktopUtil.browse(LookupLinks.ADAM4EVE.getLinks(menuData), program);
-			} else if (MenuLookupAction.FUZZWORK_MARKET.name().equals(e.getActionCommand())) {
+			}  else if (MenuLookupAction.FUZZWORK_MARKET.name().equals(e.getActionCommand())) {
 				DesktopUtil.browse(LookupLinks.FUZZWORK_MARKET.getLinks(menuData), program);
 			} else if (MenuLookupAction.EVE_TYCOON.name().equals(e.getActionCommand())) {
 				DesktopUtil.browse(LookupLinks.EVE_TYCOON.getLinks(menuData), program);
+			}else if (MenuLookupAction.C3Q_MARKET.name().equals(e.getActionCommand())) {
+				DesktopUtil.browse(LookupLinks.C3Q_MARKET.getLinks(menuData), program);
 		//Info
 			} else if (MenuLookupAction.GAMES_CHRUKER.name().equals(e.getActionCommand())) {
 				DesktopUtil.browse(LookupLinks.GAMES_CHRUKER.getLinks(menuData), program);

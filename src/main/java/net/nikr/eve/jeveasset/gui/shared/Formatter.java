@@ -383,7 +383,13 @@ public final class Formatter {
 
 	public static class DateFormatThreadSafe {
 
-		private static final TimeZone TIME_ZONE = TimeZone.getTimeZone("GMT");
+//		private static final TimeZone TIME_ZONE = TimeZone.getTimeZone("GMT");
+		/**
+		 * modify: set the default TimeZone from user's System TimeZone
+		 * date： 2023-8-11 14:22:56
+		 */
+		private static final TimeZone TIME_ZONE = TimeZone.getDefault();
+
 
 		private final String format;
 		private final boolean lenient;

@@ -21,8 +21,9 @@
 package net.nikr.eve.jeveasset.data.api.raw;
 
 import java.util.Date;
-import net.nikr.eve.jeveasset.io.shared.RawConverter;
+
 import net.troja.eve.esi.model.CorporationMiningExtractionsResponse;
+import net.nikr.eve.jeveasset.io.shared.RawConverter;
 
 
 public class RawExtraction {

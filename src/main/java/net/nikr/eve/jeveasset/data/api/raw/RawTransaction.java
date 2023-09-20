@@ -25,6 +25,7 @@ import net.nikr.eve.jeveasset.io.shared.RawConverter;
 import net.troja.eve.esi.model.CharacterWalletTransactionsResponse;
 import net.troja.eve.esi.model.CorporationWalletTransactionsResponse;
 
+
 public class RawTransaction {
 
 	private Integer clientId = null;

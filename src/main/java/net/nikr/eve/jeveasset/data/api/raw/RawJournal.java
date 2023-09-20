@@ -26,6 +26,7 @@ import net.nikr.eve.jeveasset.io.shared.RawConverter;
 import net.troja.eve.esi.model.CharacterWalletJournalResponse;
 import net.troja.eve.esi.model.CorporationWalletJournalResponse;
 
+
 public class RawJournal {
 
 	public enum ArgName {

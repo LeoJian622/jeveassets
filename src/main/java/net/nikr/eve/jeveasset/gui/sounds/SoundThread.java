@@ -20,12 +20,13 @@
  */
 package net.nikr.eve.jeveasset.gui.sounds;
 
-import java.io.IOException;
-import java.io.InputStream;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 
 public class SoundThread extends Thread {

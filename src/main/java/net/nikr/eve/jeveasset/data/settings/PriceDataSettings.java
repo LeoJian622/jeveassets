@@ -20,15 +20,16 @@
  */
 package net.nikr.eve.jeveasset.data.settings;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import javax.swing.Icon;
 import net.nikr.eve.jeveasset.gui.images.Images;
 import net.nikr.eve.jeveasset.i18n.DataModelPriceDataSettings;
 import uk.me.candle.eve.pricing.options.LocationType;
 import uk.me.candle.eve.pricing.options.PriceType;
 import uk.me.candle.eve.pricing.options.PricingFetch;
+
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 
 public class PriceDataSettings {
@@ -54,6 +55,11 @@ public class PriceDataSettings {
 		JANICE(PricingFetch.JANICE, LocationType.STATION, 1L, Images.LINK_JANICE.getIcon()) {
 			@Override String getI18N() {
 				return DataModelPriceDataSettings.get().sourceJanice();
+			}
+		},
+		CEVE_MARKET(PricingFetch.CEVE_MARKET, LocationType.REGION, 10000002L, Images.LINK_EVEMARKETER.getIcon()) {
+			@Override String getI18N() {
+				return DataModelPriceDataSettings.get().sourceCeveMarket();
 			}
 		},
 		;

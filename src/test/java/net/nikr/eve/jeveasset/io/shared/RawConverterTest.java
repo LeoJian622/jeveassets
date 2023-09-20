@@ -21,12 +21,6 @@
 package net.nikr.eve.jeveasset.io.shared;
 
 
-import java.time.OffsetDateTime;
-import java.time.ZoneOffset;
-import java.util.Date;
-import java.util.EnumMap;
-import java.util.HashMap;
-import java.util.Map;
 import net.nikr.eve.jeveasset.TestUtil;
 import net.nikr.eve.jeveasset.data.api.raw.RawContract;
 import net.nikr.eve.jeveasset.data.api.raw.RawIndustryJob;
@@ -35,23 +29,18 @@ import net.nikr.eve.jeveasset.data.api.raw.RawJournalRefType;
 import net.nikr.eve.jeveasset.data.api.raw.RawMarketOrder;
 import net.nikr.eve.jeveasset.data.sde.ItemFlag;
 import net.nikr.eve.jeveasset.data.sde.StaticData;
+import net.troja.eve.esi.model.*;
 import net.nikr.eve.jeveasset.io.shared.RawConverter.LocationFlag;
-import net.troja.eve.esi.model.CharacterContractsResponse;
-import net.troja.eve.esi.model.CharacterIndustryJobsResponse;
-import net.troja.eve.esi.model.CharacterOrdersHistoryResponse;
-import net.troja.eve.esi.model.CharacterOrdersResponse;
-import net.troja.eve.esi.model.CharacterWalletJournalResponse;
-import net.troja.eve.esi.model.CorporationContractsResponse;
-import net.troja.eve.esi.model.CorporationIndustryJobsResponse;
-import net.troja.eve.esi.model.CorporationOrdersHistoryResponse;
-import net.troja.eve.esi.model.CorporationOrdersResponse;
-import net.troja.eve.esi.model.CorporationWalletJournalResponse;
-import net.troja.eve.esi.model.MarketOrdersResponse;
-import net.troja.eve.esi.model.MarketStructuresResponse;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 import org.junit.Test;
+
+import java.time.OffsetDateTime;
+import java.time.ZoneOffset;
+import java.util.Date;
+import java.util.EnumMap;
+import java.util.HashMap;
+import java.util.Map;
+
+import static org.junit.Assert.*;
 
 
 public class RawConverterTest extends TestUtil {
@@ -66,7 +55,7 @@ public class RawConverterTest extends TestUtil {
 
 	@Test
 	public void testToFlag_CharacterAssetsResponseLocationFlagEnum() {
-		for (net.troja.eve.esi.model.CharacterAssetsResponse.LocationFlagEnum locationFlagEnum : net.troja.eve.esi.model.CharacterAssetsResponse.LocationFlagEnum.values()) {
+		for (CharacterAssetsResponse.LocationFlagEnum locationFlagEnum : CharacterAssetsResponse.LocationFlagEnum.values()) {
 			ItemFlag itemFlag = RawConverter.toFlag(locationFlagEnum);
 			assertNotNull(itemFlag);
 			assertTrue(locationFlagEnum.name() + " (" + locationFlagEnum.toString() + ") != " + itemFlag.getFlagName(),
@@ -85,7 +74,7 @@ public class RawConverterTest extends TestUtil {
 
 	@Test
 	public void testToFlag_CorporationAssetsResponseLocationFlagEnum() {
-		for (net.troja.eve.esi.model.CorporationAssetsResponse.LocationFlagEnum locationFlagEnum : net.troja.eve.esi.model.CorporationAssetsResponse.LocationFlagEnum.values()) {
+		for (CorporationAssetsResponse.LocationFlagEnum locationFlagEnum : CorporationAssetsResponse.LocationFlagEnum.values()) {
 			ItemFlag itemFlag = RawConverter.toFlag(locationFlagEnum);
 			assertNotNull(itemFlag);
 			assertTrue(locationFlagEnum.name() + " (" + locationFlagEnum.toString() + ") != " + itemFlag.getFlagName(),
@@ -115,7 +104,7 @@ public class RawConverterTest extends TestUtil {
 
 	@Test
 	public void testToFlag_CharacterBlueprintsResponseLocationFlagEnum() {
-		for (net.troja.eve.esi.model.CharacterBlueprintsResponse.LocationFlagEnum locationFlagEnum : net.troja.eve.esi.model.CharacterBlueprintsResponse.LocationFlagEnum.values()) {
+		for (CharacterBlueprintsResponse.LocationFlagEnum locationFlagEnum : CharacterBlueprintsResponse.LocationFlagEnum.values()) {
 			ItemFlag itemFlag = RawConverter.toFlag(locationFlagEnum);
 			assertNotNull(itemFlag);
 			assertTrue(locationFlagEnum.name() + " (" + locationFlagEnum.toString() + ") != " + itemFlag.getFlagName(),
@@ -131,7 +120,7 @@ public class RawConverterTest extends TestUtil {
 
 	@Test
 	public void testToFlag_CorporationBlueprintsResponseLocationFlagEnum() {
-		for (net.troja.eve.esi.model.CorporationBlueprintsResponse.LocationFlagEnum locationFlagEnum : net.troja.eve.esi.model.CorporationBlueprintsResponse.LocationFlagEnum.values()) {
+		for (CorporationBlueprintsResponse.LocationFlagEnum locationFlagEnum : CorporationBlueprintsResponse.LocationFlagEnum.values()) {
 			ItemFlag itemFlag = RawConverter.toFlag(locationFlagEnum);
 			assertNotNull(itemFlag);
 			assertTrue(locationFlagEnum.name() + " (" + locationFlagEnum.toString() + ") != " + itemFlag.getFlagName(),

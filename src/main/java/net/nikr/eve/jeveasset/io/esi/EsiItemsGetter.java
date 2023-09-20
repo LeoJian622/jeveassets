@@ -83,7 +83,7 @@ public class EsiItemsGetter extends AbstractEsiGetter {
 			marketGroupResponse = update(DEFAULT_RETRIES, new EsiHandler<MarketGroupResponse>() {
 				@Override
 				public ApiResponse<MarketGroupResponse> get() throws ApiException {
-					return getMarketApiOpen().getMarketsGroupsMarketGroupIdWithHttpInfo(typeResponse.getMarketGroupId(), null, DATASOURCE, null, null);
+					return getMarketApiOpen().getMarketsGroupsMarketGroupIdWithHttpInfo(typeResponse.getMarketGroupId(), LANGUAGE, DATASOURCE, null, null);
 				}
 			});
 		}

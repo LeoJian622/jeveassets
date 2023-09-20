@@ -26,6 +26,7 @@ import net.troja.eve.esi.model.CharacterContractsItemsResponse;
 import net.troja.eve.esi.model.CorporationContractsItemsResponse;
 import net.troja.eve.esi.model.PublicContractsItemsResponse;
 
+
 public class RawContractItem {
 
 	private Boolean isIncluded = null;

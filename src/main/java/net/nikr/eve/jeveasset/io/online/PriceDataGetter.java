@@ -51,11 +51,7 @@ import org.slf4j.LoggerFactory;
 import uk.me.candle.eve.pricing.Pricing;
 import uk.me.candle.eve.pricing.PricingFactory;
 import uk.me.candle.eve.pricing.PricingListener;
-import uk.me.candle.eve.pricing.options.LocationType;
-import uk.me.candle.eve.pricing.options.PriceLocation;
-import uk.me.candle.eve.pricing.options.PriceType;
-import uk.me.candle.eve.pricing.options.PricingFetch;
-import uk.me.candle.eve.pricing.options.PricingOptions;
+import uk.me.candle.eve.pricing.options.*;
 
 
 public class PriceDataGetter implements PricingListener {
