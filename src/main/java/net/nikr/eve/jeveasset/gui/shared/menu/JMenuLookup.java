@@ -365,7 +365,7 @@ public class JMenuLookup<T> extends JAutoMenu<T> {
 	private final JMenuItem jEveMarketer;
 	private final JMenuItem jFuzzworkMarket;
 	private final JMenuItem jEveTycoon;
-	private final JMenuItem jC3qMarket;
+	private final JMenuItem jCeveMarket;
 	private final JMenu jItemDatabase;
 	private final JMenuItem jFuzzworkItems;
 	private final JMenuItem jChruker;
@@ -501,11 +501,11 @@ public class JMenuLookup<T> extends JAutoMenu<T> {
 		jEveTycoon.addActionListener(listener);
 		jMarket.add(jEveTycoon);
 
-		jC3qMarket = new JMenuItem(GuiShared.get().ceveMarket());
-		jC3qMarket.setIcon(Images.LINK_EVEMARKETER.getIcon());
-		jC3qMarket.setActionCommand(MenuLookupAction.CEVE_MARKET.name());
-		jC3qMarket.addActionListener(listener);
-		jMarket.add(jC3qMarket);
+		jCeveMarket = new JMenuItem(GuiShared.get().ceveMarket());
+		jCeveMarket.setIcon(Images.LINK_EVEMARKETER.getIcon());
+		jCeveMarket.setActionCommand(MenuLookupAction.CEVE_MARKET.name());
+		jCeveMarket.addActionListener(listener);
+		jMarket.add(jCeveMarket);
 		
 		jAdam4eve = new JMenuItem(GuiShared.get().adam4eve());
 		jAdam4eve.setIcon(Images.LINK_ADAM4EVE.getIcon());
