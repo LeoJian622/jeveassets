@@ -35,11 +35,13 @@ import java.util.Objects;
 public class PriceDataSettings {
 
 	public enum PriceSource {
+		/*
 		EVEMARKETER(PricingFetch.EVEMARKETER, LocationType.REGION, 10000002L, Images.LINK_EVEMARKETER.getIcon()) {
 			@Override String getI18N() {
 				return DataModelPriceDataSettings.get().sourceEvemarketer();
 			}
 		},
+		*/
 		FUZZWORK(PricingFetch.FUZZWORK, LocationType.REGION, 10000002L, Images.LINK_FUZZWORK.getIcon()) {
 			@Override String getI18N() {
 				return DataModelPriceDataSettings.get().sourceFuzzwork();
@@ -379,7 +381,7 @@ public class PriceDataSettings {
 	}
 
 	public static PriceSource getDefaultPriceSource() {
-		return PriceSource.EVEMARKETER;
+		return PriceSource.FUZZWORK;
 	}
 
 	public void setPriceType(final PriceMode priceSource) {
