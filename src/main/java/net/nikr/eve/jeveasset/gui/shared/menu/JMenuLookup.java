@@ -60,7 +60,7 @@ public class JMenuLookup<T> extends JAutoMenu<T> {
 		EVE_COOKBOOK,
 		FUZZWORK_MARKET,
 		EVE_TYCOON,
-		C3Q_MARKET,
+		CEVE_MARKET,
 		EVEMAPS_DOTLAN_STATION,
 		EVEMAPS_DOTLAN_PLANET,
 		EVEMAPS_DOTLAN_SYSTEM,
@@ -223,16 +223,6 @@ public class JMenuLookup<T> extends JAutoMenu<T> {
 				Set<String> urls = new HashSet<>();
 				for (int marketTypeID : menuData.getMarketTypeIDs()) {
 					urls.add("https://evemarketer.com/types/" + marketTypeID);
-				}
-				return urls;
-			}
-		},
-		C3Q_MARKET() {
-			@Override
-			public Set<String> getLinks(MenuData<?> menuData) {
-				Set<String> urls = new HashSet<>();
-				for (int marketTypeID : menuData.getMarketTypeIDs()) {
-					urls.add("https://www.ceve-market.org/api/market/type/" + marketTypeID + ".xml");
 				}
 				return urls;
 			}
@@ -513,7 +503,7 @@ public class JMenuLookup<T> extends JAutoMenu<T> {
 
 		jC3qMarket = new JMenuItem(GuiShared.get().ceveMarket());
 		jC3qMarket.setIcon(Images.LINK_EVEMARKETER.getIcon());
-		jC3qMarket.setActionCommand(MenuLookupAction.C3Q_MARKET.name());
+		jC3qMarket.setActionCommand(MenuLookupAction.CEVE_MARKET.name());
 		jC3qMarket.addActionListener(listener);
 		jMarket.add(jC3qMarket);
 		
@@ -753,8 +743,8 @@ public class JMenuLookup<T> extends JAutoMenu<T> {
 				DesktopUtil.browse(LookupLinks.FUZZWORK_MARKET.getLinks(menuData), program);
 			} else if (MenuLookupAction.EVE_TYCOON.name().equals(e.getActionCommand())) {
 				DesktopUtil.browse(LookupLinks.EVE_TYCOON.getLinks(menuData), program);
-			}else if (MenuLookupAction.C3Q_MARKET.name().equals(e.getActionCommand())) {
-				DesktopUtil.browse(LookupLinks.C3Q_MARKET.getLinks(menuData), program);
+			}else if (MenuLookupAction.CEVE_MARKET.name().equals(e.getActionCommand())) {
+				DesktopUtil.browse(LookupLinks.CEVE_MARKET.getLinks(menuData), program);
 		//Info
 			} else if (MenuLookupAction.GAMES_CHRUKER.name().equals(e.getActionCommand())) {
 				DesktopUtil.browse(LookupLinks.GAMES_CHRUKER.getLinks(menuData), program);
